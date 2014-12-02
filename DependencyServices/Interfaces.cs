@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XamaRing.DependencyServices.BarCodeScanner;
 
 namespace XamaRing.DependencyServices
 {
@@ -21,5 +22,13 @@ namespace XamaRing.DependencyServices
     public interface ICallNumber
     {
         void CallNumber(string number);
+    }
+
+    public interface IBarCodeScanner
+    {
+        BarCodeScannerConfiguration Configuration { get; }
+
+        void Read(Action<BarCodeResult> onRead);
+        Task<BarCodeResult> ReadAsync();
     }
 }

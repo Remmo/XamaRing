@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamaRing.DependencyServices;
 
@@ -14,12 +15,14 @@ namespace XamaRing.Utility
         public static void InitializeUtility()
         {
             NetworkSvc = DependencyService.Get<INetworkService>();
+            barcodeScanner = DependencyService.Get<IBarCodeScanner>();
             mailSender = DependencyService.Get<IMailSender>();
             addContact = DependencyService.Get<IAddContact>();
             callNumber = DependencyService.Get<ICallNumber>();
         }
         public static INetworkService NetworkSvc;
 
+        private static IBarCodeScanner barcodeScanner;
         private static IMailSender mailSender;
         private static IAddContact addContact;
         private static ICallNumber callNumber;
@@ -36,6 +39,19 @@ namespace XamaRing.Utility
         public static void CallNumber(String number)
         {
             callNumber.CallNumber(number);
+        }
+
+        public static async Task<String> ReadBarcode(String number)
+        {
+            barcodeScanner.Configuration.AutoRotate = true;
+            barcodeScanner.Configuration.BottomText = "Inquadrare un codice a barre";
+            var p = await barcodeScanner.ReadAsync();
+            if (p.Success)
+            {
+                return p.Code;
+            }
+            else
+                return String.Empty;
         }
 
     }

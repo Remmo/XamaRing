@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Labs.Services;
 using XamaRing.DependencyServices;
 using XamaRing.Utility;
 
@@ -51,7 +52,7 @@ namespace XamarRing.Core.Base
             IsInitialized = true;
             var builder = new ContainerBuilder()
                 //.RegisterViewModels()
-                //.RegisterXamDependency<IBarCodeScanner>()
+                .RegisterXamDependency<IBarCodeScanner>()
                 .RegisterXamDependency<IDeviceInfo>()
                 //.RegisterXamDependency<IFileViewer>()
                 //.RegisterXamDependency<ILocationService>()
@@ -63,6 +64,7 @@ namespace XamarRing.Core.Base
                 //.RegisterXamDependency<IPhotoService>()
                 //.RegisterXamDependency<ISettings>()
                 //.RegisterXamDependency<ITextToSpeechService>()
+                .RegisterXamDependency<ISimpleCache>()
                 .RegisterXamDependency<IUserDialogService>()
                  .RegisterXamDependency<IMailSender>()
                 .RegisterXamDependency<IAddContact>()
