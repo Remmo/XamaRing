@@ -1,4 +1,5 @@
-﻿using Acr.XamForms.Mobile.Net;
+﻿using Acr.XamForms.Mobile.Media;
+using Acr.XamForms.Mobile.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,14 @@ namespace XamaRing.Utility
     {
         public static void InitializeUtility()
         {
+            MediaSvc = DependencyService.Get<Xamarin.Forms.Labs.Services.Media.IMediaPicker>();
             NetworkSvc = DependencyService.Get<INetworkService>();
             barcodeScanner = DependencyService.Get<IBarCodeScanner>();
             mailSender = DependencyService.Get<IMailSender>();
             addContact = DependencyService.Get<IAddContact>();
             callNumber = DependencyService.Get<ICallNumber>();
         }
+        public static Xamarin.Forms.Labs.Services.Media.IMediaPicker MediaSvc;
         public static INetworkService NetworkSvc;
 
         private static IBarCodeScanner barcodeScanner;

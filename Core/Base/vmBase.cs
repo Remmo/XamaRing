@@ -11,10 +11,11 @@ using XamarRing.Core.Helpers;
 
 namespace XamarRing.Core.Base
 {
-    public class vmBase : INotifyPropertyChanged
+
+    public partial class vmBase : Xamarin.Forms.Labs.Mvvm.ViewModel
     {
+        
         private IUserDialogService dialogService;
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public vmBase()
         {
@@ -33,23 +34,6 @@ namespace XamarRing.Core.Base
         public void HideLoading()
         {
             this.dialogService.HideLoading();
-        }
-        protected void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChangedEventArgs args = new PropertyChangedEventArgs(propertyName);
-                this.PropertyChanged(this, args);
-            }
-        }
-        protected void OnPropertyChanged(Object propertyInstance)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChangedEventArgs args = new PropertyChangedEventArgs(General.GetPropertyName(() => propertyInstance));
-                this.PropertyChanged(this, args);
-            }
-        }
-
+        } 
     }
 }
