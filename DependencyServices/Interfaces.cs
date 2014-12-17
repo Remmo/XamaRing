@@ -24,7 +24,7 @@ namespace XamaRing.DependencyServices
         void CallNumber(string number);
     }
 
-    public interface IBarCodeScanner
+      public interface IBarCodeScanner
     {
         BarCodeScannerConfiguration Configuration { get; }
 

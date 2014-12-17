@@ -19,8 +19,10 @@ namespace XamaRing.Utility
             NetworkSvc = DependencyService.Get<INetworkService>();
             barcodeScanner = DependencyService.Get<IBarCodeScanner>();
             mailSender = DependencyService.Get<IMailSender>();
+            mailSender = DependencyService.Get<IMailSender>();
             addContact = DependencyService.Get<IAddContact>();
             callNumber = DependencyService.Get<ICallNumber>();
+
         }
         public static Xamarin.Forms.Labs.Services.Media.IMediaPicker MediaSvc;
         public static INetworkService NetworkSvc;
@@ -57,5 +59,7 @@ namespace XamaRing.Utility
                 return String.Empty;
         }
 
+ 
+        
     }
 }
