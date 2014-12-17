@@ -13,8 +13,6 @@ using XamaRing.Utility.iOS;
 
 
 [assembly: Dependency(typeof(ContactAdder))]
-
-
 namespace XamaRing.Utility.iOS
 {
     [Preserve]

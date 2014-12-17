@@ -23,8 +23,14 @@ namespace XamaRing.DependencyServices
     {
         void CallNumber(string number);
     }
-
-      public interface IBarCodeScanner
+    public interface IImageResizer
+    {
+        byte[] ResizeImage(byte[] imageData, float width, float height);
+        byte[] ResizeImage(byte[] imageData, Int32 frazione);
+        byte[] ResizeImageFromHeight(byte[] imageData, float height);
+        byte[] ResizeImageFromWidth(byte[] imageData, float width);
+    }
+    public interface IBarCodeScanner
     {
         BarCodeScannerConfiguration Configuration { get; }
 

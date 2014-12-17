@@ -22,6 +22,7 @@ namespace XamaRing.Utility
             mailSender = DependencyService.Get<IMailSender>();
             addContact = DependencyService.Get<IAddContact>();
             callNumber = DependencyService.Get<ICallNumber>();
+            imageResizer = DependencyService.Get<IImageResizer>();
 
         }
         public static Xamarin.Forms.Labs.Services.Media.IMediaPicker MediaSvc;
@@ -31,6 +32,7 @@ namespace XamaRing.Utility
         private static IMailSender mailSender;
         private static IAddContact addContact;
         private static ICallNumber callNumber;
+        private static IImageResizer imageResizer;
         public static void SendMail(List<String> recipientsTO, List<String> recipientsCC, String subject, String body)
         {
             mailSender.SendMail(recipientsTO, recipientsCC, subject, body);
@@ -46,6 +48,25 @@ namespace XamaRing.Utility
             callNumber.CallNumber(number);
         }
 
+
+
+
+
+        public static byte[] ResizeImageFromWidth(byte[] imageData, float width)
+        {
+            return imageResizer.ResizeImageFromWidth(imageData, width);
+        }
+
+        public static byte[] ResizeImageFromHeight(byte[] imageData, float height)
+        {
+            return imageResizer.ResizeImageFromHeight(imageData, height);
+        }
+
+        public static byte[] ResizeImage(byte[] imageData, Int32 frazione)
+        {
+            return imageResizer.ResizeImage(imageData, frazione);
+        }
+
         public static async Task<String> ReadBarcode(String number)
         {
             barcodeScanner.Configuration.AutoRotate = true;
@@ -59,7 +80,7 @@ namespace XamaRing.Utility
                 return String.Empty;
         }
 
- 
-        
+
+
     }
 }

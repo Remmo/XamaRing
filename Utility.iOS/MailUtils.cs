@@ -12,8 +12,6 @@ using XamaRing.Utility.iOS;
 
 
 [assembly: Dependency(typeof(MailSender))]
-
-
 namespace XamaRing.Utility.iOS
 {
     [Preserve]

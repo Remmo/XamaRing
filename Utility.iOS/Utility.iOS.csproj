@@ -45,6 +45,7 @@
     <Compile Include="Bootstrap\UserDialogsBootstrap.cs" />
     <Compile Include="CallUtils.cs" />
     <Compile Include="ContactUtils.cs" />
+    <Compile Include="ImageResizer.cs" />
     <Compile Include="iOSHelpers.cs" />
     <Compile Include="MailUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

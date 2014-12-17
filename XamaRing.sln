@@ -19,12 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.iOS", "Utility.iOS\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.WinPhone", "Utility.WinPhone\Utility.WinPhone.csproj", "{84E0E9E3-EE65-4B89-B0DE-E9559603DB6C}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CrossTools", "CrossTools\CrossTools\CrossTools.shproj", "{DA71AE28-EEE9-45D3-ACFD-C9C779381D86}"
-EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		CrossTools\CrossTools\CrossTools.projitems*{da71ae28-eee9-45d3-acfd-c9c779381d86}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM
@@ -263,6 +258,5 @@ Global
 		{1D610EB8-8CE9-419A-9BBE-1C4D10E3DE8A} = {2020B60C-0202-4FEC-8E78-F18588716196}
 		{678C410A-C3CA-44E3-8736-D92414CCA0C1} = {2020B60C-0202-4FEC-8E78-F18588716196}
 		{84E0E9E3-EE65-4B89-B0DE-E9559603DB6C} = {2020B60C-0202-4FEC-8E78-F18588716196}
-		{DA71AE28-EEE9-45D3-ACFD-C9C779381D86} = {2020B60C-0202-4FEC-8E78-F18588716196}
 	EndGlobalSection
 EndGlobal
