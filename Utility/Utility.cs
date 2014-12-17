@@ -67,7 +67,7 @@ namespace XamaRing.Utility
             return imageResizer.ResizeImage(imageData, frazione);
         }
 
-        public static async Task<String> ReadBarcode(String number)
+        public static async Task<String> ReadBarcode()
         {
             barcodeScanner.Configuration.AutoRotate = true;
             barcodeScanner.Configuration.BottomText = "Inquadrare un codice a barre";

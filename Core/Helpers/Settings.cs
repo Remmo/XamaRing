@@ -76,7 +76,7 @@ namespace XamarRing.Core.Helpers
         }
 
 
-        internal static void DeleteLoginData()
+        public static void DeleteLoginData()
         {
             if (CheckLoginDataKey())
             {
