@@ -10,13 +10,13 @@ using Xamarin.Forms;
 namespace XamarRing.Base.Converters
 {
     public class ByteArrayToImageSourceConverter : IValueConverter
-    {        
+    {
+        public ImageSource DefaultImageSource { get; set; }
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             if (value == null)
             {
-                var fromRes = ImageSource.FromResource("ITALFERR.Rubrica.Images.EmptyFace.jpg");
-                return null;
+                return DefaultImageSource;
             }
             var bArray = (byte[])value;
 
