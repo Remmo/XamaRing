@@ -32,5 +32,6 @@ namespace Xamarin.Forms
             }
             return col;
         }
+
     }
 }

@@ -37,6 +37,7 @@
     <Compile Include="Base\AppBase.cs" />
     <Compile Include="Base\ViewBase.cs" />
     <Compile Include="Base\vmBase.cs" />
+    <Compile Include="Converters\StringToEnumConverter.cs" />
     <Compile Include="Converters\ByteArrayToImageSourceConverter.cs" />
     <Compile Include="Converters\NullToVisibleConverter.cs" />
     <Compile Include="Helpers\DeviceInfos.cs" />
