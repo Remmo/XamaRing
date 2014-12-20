@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XamarRing.Base
+namespace XamaRing.Base
 {
 	public interface ILoginManager {
 		void ShowMainPage ();

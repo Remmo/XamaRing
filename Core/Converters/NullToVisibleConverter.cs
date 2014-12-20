@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace XamarRing.Base.Converters
+namespace XamaRing.Base.Converters
 {
     public class NullToVisibleConverter : IValueConverter
     {

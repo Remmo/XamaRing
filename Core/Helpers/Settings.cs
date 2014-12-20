@@ -3,7 +3,7 @@ using Refractored.Xam.Settings;
 using Refractored.Xam.Settings.Abstractions;
 using System;
 
-namespace XamarRing.Core.Helpers
+namespace XamaRing.Core.Helpers
 {
 
     public sealed class AuthData

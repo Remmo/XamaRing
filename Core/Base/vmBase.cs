@@ -7,9 +7,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using XamarRing.Core.Helpers;
+using XamaRing.Core.Helpers;
 
-namespace XamarRing.Core.Base
+namespace XamaRing.Core.Base
 {
 
     public partial class vmBase : Xamarin.Forms.Labs.Mvvm.ViewModel

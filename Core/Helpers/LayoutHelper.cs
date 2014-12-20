@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace XamarRing.Core.Helpers
+namespace XamaRing.Core.Helpers
 {
     public enum TipoCampoEdit
     {

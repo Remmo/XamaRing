@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace XamarRing.Base
+namespace XamaRing.Base
 {
     public class ViewLogin : View
     {

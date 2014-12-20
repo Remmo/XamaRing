@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 
-namespace XamarRing.Core.Helpers
+namespace XamaRing.Core.Helpers
 {
     public static class DeviceInfos
     {

@@ -9,7 +9,7 @@
 //using Xamarin.Forms;
 
 
-//namespace XamarRing.Core.Helpers
+//namespace XamaRing.Core.Helpers
 //{
 //    public class Login : View
 //    {
@@ -38,15 +38,15 @@
 
 //            this.dialogService = dialogService;
 //            this.networkService = networkService;
-//            //if (!XamarRing.Base.Helpers.DeviceInfos.IsInitialized)
-//            //    XamarRing.Base.Helpers.DeviceInfos.Initialize(Xamarin.Forms.Labs.Services.Resolver.Resolve<Xamarin.Forms.Labs.IDevice>());
+//            //if (!XamaRing.Base.Helpers.DeviceInfos.IsInitialized)
+//            //    XamaRing.Base.Helpers.DeviceInfos.Initialize(Xamarin.Forms.Labs.Services.Resolver.Resolve<Xamarin.Forms.Labs.IDevice>());
 
 //            this.AppName = applicationName;
 //            //this.Title = "Autenticazione alla rete ITALFERR";
 //            Image img = new Image();
 //            img.Opacity = 0.2;
 //            //Device.OnPlatform(iOS: () => { img.Source = ImageSource.FromFile("Images/effe.png"); });
-//            img.Source = ImageSource.FromResource("XamarRing.Base.Images.effe.png");
+//            img.Source = ImageSource.FromResource("XamaRing.Base.Images.effe.png");
 //            //img.HeightRequest = 500;
 
 //            img.HorizontalOptions = LayoutOptions.FillAndExpand;
@@ -65,7 +65,7 @@
 //                HeightRequest = 80,
 //                HorizontalOptions = LayoutOptions.CenterAndExpand,
 //            };
-//            imgLogoItalferr.Source = ImageSource.FromResource("XamarRing.Base.Images.LogoItalferr.png");
+//            imgLogoItalferr.Source = ImageSource.FromResource("XamaRing.Base.Images.LogoItalferr.png");
 //            Label lblProblemiAccesso = new Label
 //            {
 //                Text = "Problemi di accesso?",
@@ -142,9 +142,9 @@
 //            //stackMain.Children.Add(loader);
 
 //            #endregion
-//            if (XamarRing.Base.Helpers.Settings.CheckLoginDataKey())
+//            if (XamaRing.Base.Helpers.Settings.CheckLoginDataKey())
 //            {
-//                AuthData auth = XamarRing.Base.Helpers.Settings.GetLoginData();
+//                AuthData auth = XamaRing.Base.Helpers.Settings.GetLoginData();
 //                txtUsername.Text = auth.Username;
 //                txtPassword.Text = auth.Password;
 //                this.noSave = true;
@@ -266,11 +266,11 @@
 //                    this.LoginOK();
 //                    if (!noSave && this.switchMemorizzaPassword.IsToggled)
 //                    {
-//                        XamarRing.Base.Helpers.Settings.SaveLoginData(new Helpers.AuthData() { Domain = "ITALFERR", Username = this.txtUsername.Text, Password = this.txtPassword.Text });
+//                        XamaRing.Base.Helpers.Settings.SaveLoginData(new Helpers.AuthData() { Domain = "ITALFERR", Username = this.txtUsername.Text, Password = this.txtPassword.Text });
 //                    }
 //                    else
 //                    {
-//                        XamarRing.Base.Helpers.Settings.DeleteLoginData();
+//                        XamaRing.Base.Helpers.Settings.DeleteLoginData();
 //                    }
 //                    //});
 //                }

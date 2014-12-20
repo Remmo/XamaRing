@@ -16,7 +16,7 @@ using XamaRing.DependencyServices;
 using XamaRing.Utility;
 
 
-namespace XamarRing.Core.Base
+namespace XamaRing.Core.Base
 {
 
     public static class AppBase
@@ -44,8 +44,8 @@ namespace XamarRing.Core.Base
             if (IsInitialized)
                 return;
 
-            //if (!XamarRing.Base.Helpers.DeviceInfos.IsInitialized)
-            //    XamarRing.Base.Helpers.DeviceInfos.Initialize(Xamarin.Forms.Labs.Services.Resolver.Resolve<Xamarin.Forms.Labs.IDevice>());
+            //if (!XamaRing.Base.Helpers.DeviceInfos.IsInitialized)
+            //    XamaRing.Base.Helpers.DeviceInfos.Initialize(Xamarin.Forms.Labs.Services.Resolver.Resolve<Xamarin.Forms.Labs.IDevice>());
 
 
 
@@ -76,7 +76,7 @@ namespace XamarRing.Core.Base
                 .Register(x => new ViewModelResolver(vt => AppContainer.Resolve(vt) as IViewModel))
                 .As<IViewModelResolver>()
                 .SingleInstance();
-            //XamarRing.Base.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
+            //XamaRing.Base.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
             AppContainer = builder.Build();
             InitHelpers();
         }

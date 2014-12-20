@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XamarRing.Core.Helpers
+namespace XamaRing.Core.Helpers
 {
     public static class General
     {
