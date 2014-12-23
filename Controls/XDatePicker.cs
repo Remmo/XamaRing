@@ -11,7 +11,7 @@ namespace XamaRing.Controls
     public class XDatePicker : DatePicker
     {
         private string _format = null;
-        public static readonly BindableProperty NullableDateProperty = BindableProperty.Create<XDatePicker, DateTime?>(p => p.NullableDate, null);
+        public static readonly BindableProperty NullableDateProperty = BindableProperty.Create<XDatePicker, DateTime?>(p => p.NullableDate, null,defaultBindingMode:BindingMode.TwoWay);
 
         public DateTime? NullableDate
         {
@@ -22,7 +22,7 @@ namespace XamaRing.Controls
         private void UpdateDate()
         {
             if (NullableDate.HasValue) { if (null != _format) Format = _format; Date = NullableDate.Value; }
-            else { _format = Format; Format = "pick ..."; }
+            else { _format = Format; Format = "data"; }
         }
         protected override void OnBindingContextChanged()
         {
