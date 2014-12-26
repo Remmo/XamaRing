@@ -21,7 +21,7 @@ namespace XamaRing.Utility.Droid
         AddressBook book;
         public ContactAdder()
         {
-            book = new AddressBook(Application.Context);
+            book = new AddressBook(Android.App.Application.Context);
         }
 
 
