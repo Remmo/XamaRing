@@ -1,8 +1,6 @@
-﻿using Acr.XamForms.Infrastructure;
-using Acr.XamForms.Mobile;
+﻿using Acr.XamForms.Mobile;
 using Acr.XamForms.Mobile.Net;
 using Acr.XamForms.UserDialogs;
-using Acr.XamForms.ViewModels;
 using Autofac;
 using System;
 using System.Collections.Generic;
@@ -50,34 +48,34 @@ namespace XamaRing.Core.Base
 
 
             IsInitialized = true;
-            var builder = new ContainerBuilder()
-                //.RegisterViewModels()
-                .RegisterXamDependency<IBarCodeScanner>()
-                .RegisterXamDependency<IDeviceInfo>()
-                //.RegisterXamDependency<IFileViewer>()
-                //.RegisterXamDependency<ILocationService>()
-                //.RegisterXamDependency<ILogger>()
-                //.RegisterXamDependency<IFileSystem>()
-                ////.RegisterXamDependency<IMailService>()
-                //.RegisterXamDependency<INetworkService>()
-                //.RegisterXamDependency<IPhoneService>()
-                //.RegisterXamDependency<IPhotoService>()
-                //.RegisterXamDependency<ISettings>()
-                //.RegisterXamDependency<ITextToSpeechService>()
-                .RegisterXamDependency<ISimpleCache>()
-                .RegisterXamDependency<IUserDialogService>()
-                 .RegisterXamDependency<IMailSender>()
-                .RegisterXamDependency<IAddContact>()
-                .RegisterXamDependency<ICallNumber>();
+            //var builder = new ContainerBuilder()
+            //    //.RegisterViewModels()
+            //    .RegisterXamDependency<IBarCodeScanner>()
+            //    .RegisterXamDependency<IDeviceInfo>()
+            //    //.RegisterXamDependency<IFileViewer>()
+            //    //.RegisterXamDependency<ILocationService>()
+            //    //.RegisterXamDependency<ILogger>()
+            //    //.RegisterXamDependency<IFileSystem>()
+            //    ////.RegisterXamDependency<IMailService>()
+            //    //.RegisterXamDependency<INetworkService>()
+            //    //.RegisterXamDependency<IPhoneService>()
+            //    //.RegisterXamDependency<IPhotoService>()
+            //    //.RegisterXamDependency<ISettings>()
+            //    //.RegisterXamDependency<ITextToSpeechService>()
+            //    .RegisterXamDependency<ISimpleCache>()
+            //    .RegisterXamDependency<IUserDialogService>()
+            //     .RegisterXamDependency<IMailSender>()
+            //    .RegisterXamDependency<IAddContact>()
+            //    .RegisterXamDependency<ICallNumber>();
 
-            //.RegisterXamDependency<ISignatureService>();
+            ////.RegisterXamDependency<ISignatureService>();
 
-            builder
-                .Register(x => new ViewModelResolver(vt => AppContainer.Resolve(vt) as IViewModel))
-                .As<IViewModelResolver>()
-                .SingleInstance();
-            //XamaRing.Base.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
-            AppContainer = builder.Build();
+            //builder
+            //    .Register(x => new ViewModelResolver(vt => AppContainer.Resolve(vt) as IViewModel))
+            //    .As<IViewModelResolver>()
+            //    .SingleInstance();
+            ////XamaRing.Base.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
+            //AppContainer = builder.Build();
             InitHelpers();
         }
 
