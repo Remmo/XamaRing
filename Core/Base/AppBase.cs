@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Labs.Services;
 using XamaRing.DependencyServices;
-using XamaRing.Utility;
+using XamaRing;
+using XamaRing.DependencyServices.Configs;
 
 
 namespace XamaRing.Core.Base
@@ -19,13 +20,29 @@ namespace XamaRing.Core.Base
 
     public static class AppBase
     {
+        public static Boolean IsThemeChanged = false;
         public static bool IsLoggedIn = false;
         public static bool IsInitialized = false;
 
-
+        private static StyleConfig baseCrossStyle;
+        private static StyleConfig pageCrossStyle;
 
         public static String Token;
         public static IContainer AppContainer;
+
+        public static void SetCrossStyle(StyleConfig cfg)
+        {
+            baseCrossStyle = cfg;
+            pageCrossStyle = cfg;
+            CrossTools.ApplyCrossTheme(cfg);
+        }
+
+        public static StyleConfig GetCrossStryle()
+        {
+            pageCrossStyle = baseCrossStyle;
+            return pageCrossStyle;
+        }
+
         //public static NavigationPage AppNavigator;
         public static Page AppMainPage;
 
@@ -41,41 +58,7 @@ namespace XamaRing.Core.Base
         {
             if (IsInitialized)
                 return;
-
-            //if (!XamaRing.Base.Helpers.DeviceInfos.IsInitialized)
-            //    XamaRing.Base.Helpers.DeviceInfos.Initialize(Xamarin.Forms.Labs.Services.Resolver.Resolve<Xamarin.Forms.Labs.IDevice>());
-
-
-
             IsInitialized = true;
-            //var builder = new ContainerBuilder()
-            //    //.RegisterViewModels()
-            //    .RegisterXamDependency<IBarCodeScanner>()
-            //    .RegisterXamDependency<IDeviceInfo>()
-            //    //.RegisterXamDependency<IFileViewer>()
-            //    //.RegisterXamDependency<ILocationService>()
-            //    //.RegisterXamDependency<ILogger>()
-            //    //.RegisterXamDependency<IFileSystem>()
-            //    ////.RegisterXamDependency<IMailService>()
-            //    //.RegisterXamDependency<INetworkService>()
-            //    //.RegisterXamDependency<IPhoneService>()
-            //    //.RegisterXamDependency<IPhotoService>()
-            //    //.RegisterXamDependency<ISettings>()
-            //    //.RegisterXamDependency<ITextToSpeechService>()
-            //    .RegisterXamDependency<ISimpleCache>()
-            //    .RegisterXamDependency<IUserDialogService>()
-            //     .RegisterXamDependency<IMailSender>()
-            //    .RegisterXamDependency<IAddContact>()
-            //    .RegisterXamDependency<ICallNumber>();
-
-            ////.RegisterXamDependency<ISignatureService>();
-
-            //builder
-            //    .Register(x => new ViewModelResolver(vt => AppContainer.Resolve(vt) as IViewModel))
-            //    .As<IViewModelResolver>()
-            //    .SingleInstance();
-            ////XamaRing.Base.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
-            //AppContainer = builder.Build();
             InitHelpers();
         }
 

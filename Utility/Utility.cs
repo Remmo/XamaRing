@@ -7,9 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamaRing.DependencyServices;
+using XamaRing.DependencyServices.Configs;
 
 
-namespace XamaRing.Utility
+namespace XamaRing
 {
     public static class CrossTools
     {
@@ -23,6 +24,7 @@ namespace XamaRing.Utility
             addContact = DependencyService.Get<IAddContact>();
             callNumber = DependencyService.Get<ICallNumber>();
             imageResizer = DependencyService.Get<IImageResizer>();
+            applyTheme = DependencyService.Get<IApplyTheme>();
 
         }
         public static Xamarin.Forms.Labs.Services.Media.IMediaPicker MediaSvc;
@@ -33,6 +35,7 @@ namespace XamaRing.Utility
         private static IAddContact addContact;
         private static ICallNumber callNumber;
         private static IImageResizer imageResizer;
+        private static IApplyTheme applyTheme;
         public static void SendMail(List<String> recipientsTO, List<String> recipientsCC, String subject, String body)
         {
             mailSender.SendMail(recipientsTO, recipientsCC, subject, body);
@@ -80,6 +83,16 @@ namespace XamaRing.Utility
                 return String.Empty;
         }
 
+
+
+        #region Themes
+        public static void ApplyCrossTheme(StyleConfig config)
+        {
+            applyTheme.ApplyTheme(config);
+            // applyTheme.ApplyTheme(
+
+        }
+        #endregion
 
 
     }

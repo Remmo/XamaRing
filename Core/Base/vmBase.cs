@@ -19,7 +19,7 @@ namespace XamaRing.Core.Base
 
         public vmBase()
         {
-            this.dialogService = AppBase.Resolve<IUserDialogService>();
+            //this.dialogService = AppBase.Resolve<IUserDialogService>();
         }
         public async Task ShowAlert(String message, String title = null, String okText = "OK")
         {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XamaRing.DependencyServices.BarCodeScanner;
+using XamaRing.DependencyServices.Configs;
 
 namespace XamaRing.DependencyServices
 {
@@ -36,5 +37,10 @@ namespace XamaRing.DependencyServices
 
         void Read(Action<BarCodeResult> onRead);
         Task<BarCodeResult> ReadAsync();
+    }
+
+    public interface IApplyTheme
+    {
+        void ApplyTheme(StyleConfig config);
     }
 }
