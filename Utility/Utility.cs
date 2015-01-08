@@ -19,8 +19,7 @@ namespace XamaRing
             MediaSvc = DependencyService.Get<Xamarin.Forms.Labs.Services.Media.IMediaPicker>();
             NetworkSvc = DependencyService.Get<INetworkService>();
             barcodeScanner = DependencyService.Get<IBarCodeScanner>();
-            mailSender = DependencyService.Get<IMailSender>();
-            mailSender = DependencyService.Get<IMailSender>();
+            mailSender = DependencyService.Get<IMailSender>();          
             addContact = DependencyService.Get<IAddContact>();
             callNumber = DependencyService.Get<ICallNumber>();
             imageResizer = DependencyService.Get<IImageResizer>();

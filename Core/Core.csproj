@@ -63,6 +63,9 @@
     <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Acr.XamForms">
+      <HintPath>..\packages\Acr.XamForms.1.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+wp8\Acr.XamForms.dll</HintPath>
+    </Reference>
     <Reference Include="Acr.XamForms.Mobile">
       <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\portable-win+net45+MonoAndroid+MonoTouch+wp8\Acr.XamForms.Mobile.dll</HintPath>
     </Reference>
