@@ -39,7 +39,7 @@ namespace XamaRing.Core.Base
             CrossTools.ApplyCrossTheme(cfg);
         }
 
-        public static StyleConfig GetCrossStryle()
+        public static StyleConfig GetCrossStyle()
         {
             pageCrossStyle = baseCrossStyle;
             return pageCrossStyle;
