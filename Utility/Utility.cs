@@ -14,17 +14,10 @@ namespace XamaRing
 {
     public static class CrossTools
     {
-        public static void InitializeUtility()
+        public static void InitializeUtility(INetworkService net, Xamarin.Forms.Labs.Services.Media.IMediaPicker pick)
         {
-            MediaSvc = DependencyService.Get<Xamarin.Forms.Labs.Services.Media.IMediaPicker>();
-            NetworkSvc = DependencyService.Get<INetworkService>();
-            barcodeScanner = DependencyService.Get<IBarCodeScanner>();
-            mailSender = DependencyService.Get<IMailSender>();          
-            addContact = DependencyService.Get<IAddContact>();
-            callNumber = DependencyService.Get<ICallNumber>();
-            imageResizer = DependencyService.Get<IImageResizer>();
-            applyTheme = DependencyService.Get<IApplyTheme>();
-
+            MediaSvc = pick;
+            NetworkSvc = net;
         }
         public static Xamarin.Forms.Labs.Services.Media.IMediaPicker MediaSvc;
         public static INetworkService NetworkSvc;
@@ -37,16 +30,29 @@ namespace XamaRing
         private static IApplyTheme applyTheme;
         public static void SendMail(List<String> recipientsTO, List<String> recipientsCC, String subject, String body)
         {
+            if (mailSender == null)
+            {
+                mailSender = DependencyService.Get<IMailSender>();
+            }
             mailSender.SendMail(recipientsTO, recipientsCC, subject, body);
         }
 
         public static void AddContact(String firstName, String lastName, String mobilePhone, String workPhone = "", String homePhone = "", String fax = "", String mail = "")
         {
+            if (addContact == null)
+            {
+                addContact = DependencyService.Get<IAddContact>();
+            }
             addContact.AddContact(firstName, lastName, mobilePhone, workPhone, homePhone, fax, mail);
         }
 
         public static void CallNumber(String number)
         {
+            if (callNumber == null)
+            {
+                callNumber = DependencyService.Get<ICallNumber>();
+
+            }
             callNumber.CallNumber(number);
         }
 
@@ -56,21 +62,37 @@ namespace XamaRing
 
         public static byte[] ResizeImageFromWidth(byte[] imageData, float width)
         {
+            if (imageResizer == null)
+            {
+                imageResizer = DependencyService.Get<IImageResizer>();
+            }
             return imageResizer.ResizeImageFromWidth(imageData, width);
         }
 
         public static byte[] ResizeImageFromHeight(byte[] imageData, float height)
         {
+            if (imageResizer == null)
+            {
+                imageResizer = DependencyService.Get<IImageResizer>();
+            }
             return imageResizer.ResizeImageFromHeight(imageData, height);
         }
 
         public static byte[] ResizeImage(byte[] imageData, Int32 frazione)
         {
+            if (imageResizer == null)
+            {
+                imageResizer = DependencyService.Get<IImageResizer>();
+            }
             return imageResizer.ResizeImage(imageData, frazione);
         }
 
         public static async Task<String> ReadBarcode()
         {
+            if (barcodeScanner == null)
+            {
+                barcodeScanner = DependencyService.Get<IBarCodeScanner>();
+            }
             barcodeScanner.Configuration.AutoRotate = true;
             barcodeScanner.Configuration.BottomText = "Inquadrare un codice a barre";
             var p = await barcodeScanner.ReadAsync();
@@ -87,6 +109,10 @@ namespace XamaRing
         #region Themes
         public static void ApplyCrossTheme(StyleConfig config)
         {
+            if (applyTheme == null)
+            {
+                applyTheme = DependencyService.Get<IApplyTheme>();
+            }
             applyTheme.ApplyTheme(config);
             // applyTheme.ApplyTheme(
 

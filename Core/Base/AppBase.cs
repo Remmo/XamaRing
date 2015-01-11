@@ -9,12 +9,14 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.Labs.Services;
 using XamaRing.DependencyServices;
 using XamaRing;
 using XamaRing.DependencyServices.Configs;
-using Acr.XamForms.Infrastructure;
-using Acr.XamForms.ViewModels;
+using Xamarin.Forms.Labs.Mvvm;
+using Xamarin.Forms.Labs.Services.Media;
+
+//using Acr.XamForms.Infrastructure;
+//using Acr.XamForms.ViewModels;
 
 
 namespace XamaRing.Core.Base
@@ -50,49 +52,44 @@ namespace XamaRing.Core.Base
 
         public static void InitHelpers()
         {
-            CrossTools.InitializeUtility();
-            XamaRing.Core.Helpers.DeviceInfos.Initialize(AppContainer.Resolve<IDeviceInfo>());
+            CrossTools.InitializeUtility(Resolve<INetworkService>(), Resolve<IMediaPicker>());
+            XamaRing.Core.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
         }
 
-
+        static SimpleContainer ResContainer;
 
         public static void Init()
         {
             if (IsInitialized)
                 return;
-           
+
             IsInitialized = true;
-            var builder = new ContainerBuilder()
+            ResContainer = new SimpleContainer();
+            //Resolver.SetResolver(ResContainer.GetResolver());
+            AppContainer = new ContainerBuilder()
                 //.RegisterViewModels()
                 //.RegisterXamDependency<IBarCodeScanner>()
+                .RegisterXamDependency<INetworkService>()
+                .RegisterXamDependency<IXFormsApp>()
                 .RegisterXamDependency<IDeviceInfo>()
-                //.RegisterXamDependency<IFileViewer>()
-                //.RegisterXamDependency<ILocationService>()
-                //.RegisterXamDependency<ILogger>()
-                //.RegisterXamDependency<IFileSystem>()
-                ////.RegisterXamDependency<IMailService>()
-                //.RegisterXamDependency<INetworkService>()
-                //.RegisterXamDependency<IPhoneService>()
-                //.RegisterXamDependency<IPhotoService>()
-                //.RegisterXamDependency<ISettings>()
-                //.RegisterXamDependency<ITextToSpeechService>()
                 .RegisterXamDependency<IUserDialogService>()
-                 .RegisterXamDependency<IMailSender>()
+                .RegisterXamDependency<IMailSender>()
                 .RegisterXamDependency<IAddContact>()
-                .RegisterXamDependency<ICallNumber>();
+                .RegisterXamDependency<ICallNumber>()
+                .RegisterXamDependency<IMediaPicker>()
+                .Build();
 
-            //.RegisterXamDependency<ISignatureService>();
+            ////.RegisterXamDependency<ISignatureService>();
 
-            builder
-                .Register(x => new ViewModelResolver(vt => AppContainer.Resolve(vt) as IViewModel))
-                .As<IViewModelResolver>()
-                .SingleInstance();
-            //XamarRing.Base.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
-            AppContainer = builder.Build();
+            //builder
+            //    .Register(x => new ViewModelResolver(vt => AppContainer.Resolve(vt) as IViewModel))
+            //    .As<IViewModelResolver>()
+            //    .SingleInstance();
+            ////XamarRing.Base.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
+          
             InitHelpers();
-            IsInitialized = true;           
+            IsInitialized = true;
         }
-
         public static ContainerBuilder RegisterXamDependency<T>(this ContainerBuilder builder) where T : class
         {
             builder.Register(x => DependencyService.Get<T>()).SingleInstance();
