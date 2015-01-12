@@ -12,7 +12,6 @@ using Xamarin.Forms;
 using XamaRing.DependencyServices;
 using XamaRing;
 using XamaRing.DependencyServices.Configs;
-using Xamarin.Forms.Labs.Mvvm;
 using Xamarin.Forms.Labs.Services.Media;
 
 //using Acr.XamForms.Infrastructure;
@@ -67,7 +66,6 @@ namespace XamaRing.Core.Base
                 //.RegisterViewModels()
                 //.RegisterXamDependency<IBarCodeScanner>()                
                 .RegisterXamDependency<INetworkService>()
-                .RegisterXamDependency<IXFormsApp>()
                 .RegisterXamDependency<IDeviceInfo>()
                 .RegisterXamDependency<IUserDialogService>()
                 .RegisterXamDependency<IMailSender>()

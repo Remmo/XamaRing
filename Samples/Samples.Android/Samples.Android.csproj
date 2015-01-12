@@ -96,13 +96,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Xamarin.Forms.1.3.0.6292\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Labs, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Xamarin.Forms.Labs.1.2.0\lib\MonoAndroid\Xamarin.Forms.Labs.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Labs.Droid">
-      <HintPath>..\..\packages\Xamarin.Forms.Labs.1.2.0\lib\MonoAndroid\Xamarin.Forms.Labs.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Platform.Android, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Xamarin.Forms.1.3.0.6292\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
