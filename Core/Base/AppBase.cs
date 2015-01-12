@@ -47,11 +47,6 @@ namespace XamaRing.Core.Base
             pageCrossStyle = baseCrossStyle;
             return pageCrossStyle;
         }
-
-
-
-        public static Page AppMainPage;
-
         public static void InitHelpers()
         {
             CrossTools.InitializeUtility(Resolve<INetworkService>(), Resolve<IMediaPicker>());

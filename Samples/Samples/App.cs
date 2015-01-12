@@ -12,13 +12,10 @@ namespace Samples
     {
         public static Page GetMainPage()
         {
-            Init();
+            XamaRing.Core.Base.AppBase.Init();
             AppBase.AppNavigator = new NavigationPage(new Samples.Views.MainView());
             return AppBase.AppNavigator;
         }
-        public static void Init()
-        {
-            XamaRing.Core.Base.AppBase.Init();
-        }
+        
     }
 }

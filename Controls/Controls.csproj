@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="LoginEntry.cs" />
     <Compile Include="XDatePicker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

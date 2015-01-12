@@ -12,6 +12,17 @@ namespace Samples.ViewModels
 {
     public class vmMain : vmBase
     {
+        private int myVar;
+
+        public int MyProperty
+        {
+            get { return myVar; }
+            set
+            {
+                this.SetProperty(ref this.myVar, value);
+            }
+        }
+
 
         public ICommand PopupCommand { get; private set; }
         public ICommand PaginaCommand { get; private set; }
