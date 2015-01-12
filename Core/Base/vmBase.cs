@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 using XamaRing.Core.Helpers;
 
 namespace XamaRing.Core.Base
@@ -21,6 +22,16 @@ namespace XamaRing.Core.Base
         public vmBase()
         {
             //this.dialogService = AppBase.Resolve<IUserDialogService>();
+        }
+
+        private INavigation _navigation;
+        public INavigation Navigation
+        {
+            get
+            {
+                return _navigation ?? AppBase.AppNavigator.Navigation;
+            }
+            set { _navigation = value; }
         }
         public async Task ShowAlert(String message, String title = null, String okText = "OK")
         {

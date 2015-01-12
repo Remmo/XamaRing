@@ -32,10 +32,11 @@ namespace XamaRing.Core.Base
         private static StyleConfig pageCrossStyle;
 
         public static String Token;
-        public static IContainer AppContainer;
+        internal static IContainer AppContainer;
+        public static NavigationPage AppNavigator;
 
         public static void SetCrossStyle(StyleConfig cfg)
-        {
+        {            
             baseCrossStyle = cfg;
             pageCrossStyle = cfg;
             CrossTools.ApplyCrossTheme(cfg);
@@ -47,7 +48,8 @@ namespace XamaRing.Core.Base
             return pageCrossStyle;
         }
 
-        //public static NavigationPage AppNavigator;
+
+
         public static Page AppMainPage;
 
         public static void InitHelpers()
@@ -68,7 +70,7 @@ namespace XamaRing.Core.Base
             //Resolver.SetResolver(ResContainer.GetResolver());
             AppContainer = new ContainerBuilder()
                 //.RegisterViewModels()
-                //.RegisterXamDependency<IBarCodeScanner>()
+                //.RegisterXamDependency<IBarCodeScanner>()                
                 .RegisterXamDependency<INetworkService>()
                 .RegisterXamDependency<IXFormsApp>()
                 .RegisterXamDependency<IDeviceInfo>()

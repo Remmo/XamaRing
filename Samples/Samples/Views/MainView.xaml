@@ -3,6 +3,8 @@
 					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 					   x:Class="Samples.Views.MainView">
   <StackLayout Orientation="Vertical">
-    <Button Text="Premimi" />
+    <Button Text="ApriPopup" Command="{Binding PopupCommand}"/>
+    <Button Text="ApriPagina" Command="{Binding PaginaCommand}"/>
+    <Button Text="ApriAlert" Command="{Binding AlertCommand}"/>
   </StackLayout>
 </ContentPage>
