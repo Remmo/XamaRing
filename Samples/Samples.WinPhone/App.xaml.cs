@@ -7,6 +7,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Samples.WinPhone.Resources;
+using Acr.XamForms.UserDialogs.WindowsPhone;
+using Acr.XamForms.Mobile.WindowsPhone;
 
 namespace Samples.WinPhone
 {
@@ -23,6 +25,9 @@ namespace Samples.WinPhone
         /// </summary>
         public App()
         {
+            new Acr.XamForms.Mobile.Media.MediaPicker();
+            new UserDialogService();
+            new DeviceInfo();
             // Global handler for uncaught exceptions.
             UnhandledException += Application_UnhandledException;
 

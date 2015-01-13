@@ -3,11 +3,11 @@ using Acr.XamForms.BarCodeScanner;
 
 namespace Samples.Droid.Bootstrap
 {
-    public class BarCodeScannerBootstrap 
+    public class BarCodeServiceBootstrap 
     {
-        public BarCodeScannerBootstrap() 
+        public BarCodeServiceBootstrap() 
         {
-            new BarCodeScanner();
+            new BarCodeService();
         }
     }
 }

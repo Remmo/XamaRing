@@ -97,26 +97,30 @@
     <Compile Include="ImageResizer.cs" />
     <Compile Include="MailUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeUtilis.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.XamForms.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\wp8\Acr.XamForms.Mobile.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.Mobile.2.0.0\lib\wp8\Acr.XamForms.Mobile.dll</HintPath>
     </Reference>
     <Reference Include="Acr.XamForms.Mobile.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\wp8\Acr.XamForms.Mobile.WindowsPhone.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.Mobile.2.0.0\lib\wp8\Acr.XamForms.Mobile.WindowsPhone.dll</HintPath>
     </Reference>
     <Reference Include="Acr.XamForms.UserDialogs, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.2.1.2\lib\wp8\Acr.XamForms.UserDialogs.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.UserDialogs.3.0.0\lib\wp8\Acr.XamForms.UserDialogs.dll</HintPath>
     </Reference>
     <Reference Include="Acr.XamForms.UserDialogs.WindowsPhone, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.2.1.2\lib\wp8\Acr.XamForms.UserDialogs.WindowsPhone.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.UserDialogs.3.0.0\lib\wp8\Acr.XamForms.UserDialogs.WindowsPhone.dll</HintPath>
     </Reference>
     <Reference Include="ExifLib">
       <HintPath>..\packages\ExifLib.PCL.1.0.0\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="JeffWilcox.PhoneThemeManager">
+      <HintPath>..\packages\PhoneThemeManager.2.1.2\lib\windowsphone8\JeffWilcox.PhoneThemeManager.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -158,7 +162,7 @@
     </Reference>
     <Reference Include="Xamarin.Mobile, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\wp8\Xamarin.Mobile.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.Mobile.2.0.0\lib\wp8\Xamarin.Mobile.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

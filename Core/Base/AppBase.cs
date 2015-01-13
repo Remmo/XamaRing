@@ -12,7 +12,7 @@ using Xamarin.Forms;
 using XamaRing.DependencyServices;
 using XamaRing;
 using XamaRing.DependencyServices.Configs;
-using Xamarin.Forms.Labs.Services.Media;
+
 
 //using Acr.XamForms.Infrastructure;
 //using Acr.XamForms.ViewModels;
@@ -35,7 +35,7 @@ namespace XamaRing.Core.Base
         public static NavigationPage AppNavigator;
 
         public static void SetCrossStyle(StyleConfig cfg)
-        {            
+        {
             baseCrossStyle = cfg;
             pageCrossStyle = cfg;
             CrossTools.ApplyCrossTheme(cfg);
@@ -48,7 +48,7 @@ namespace XamaRing.Core.Base
         }
         public static void InitHelpers()
         {
-            CrossTools.InitializeUtility(Resolve<INetworkService>(), Resolve<IMediaPicker>());
+            CrossTools.InitializeUtility(Resolve<INetworkService>(), Resolve<Acr.XamForms.Mobile.Media.IMediaPicker>());
             XamaRing.Core.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
         }
 
@@ -64,19 +64,19 @@ namespace XamaRing.Core.Base
             //Resolver.SetResolver(ResContainer.GetResolver());
             //if (InterfacesToRegister == null)
             //{
-                AppContainer = new ContainerBuilder()
-                    //.RegisterViewModels()
-                    //.RegisterXamDependency<IBarCodeScanner>()                
-                    .RegisterXamDependency<INetworkService>()
-                    .RegisterXamDependency<IDeviceInfo>()
-                    .RegisterXamDependency<IUserDialogService>()
-                    .RegisterXamDependency<IMailSender>()
-                    .RegisterXamDependency<IAddContact>()
-                    .RegisterXamDependency<ICallNumber>()
-                    .RegisterXamDependency<IMediaPicker>()
-                    .RegisterXamDependency<Xamarin.Forms.Labs.Services.ISimpleCache>()
+            AppContainer = new ContainerBuilder()
+                //.RegisterViewModels()
+                //.RegisterXamDependency<IBarCodeScanner>()                
+                .RegisterXamDependency<INetworkService>()
+                .RegisterXamDependency<IDeviceInfo>()
+                .RegisterXamDependency<IUserDialogService>()
+                .RegisterXamDependency<IMailSender>()
+                .RegisterXamDependency<IAddContact>()
+                .RegisterXamDependency<ICallNumber>()              
+                .RegisterXamDependency<Acr.XamForms.Mobile.Media.IMediaPicker>()
+                .RegisterXamDependency<Xamarin.Forms.Labs.Services.ISimpleCache>()
 
-                    .Build();
+                .Build();
             //}
             //else
             //{
@@ -84,7 +84,7 @@ namespace XamaRing.Core.Base
             //    foreach (var itf in InterfacesToRegister)
             //    {
             //        Type t = p.RegisterXamDependency<t>(p);
-                   
+
             //    }
             //}
 
@@ -95,7 +95,7 @@ namespace XamaRing.Core.Base
             //    .As<IViewModelResolver>()
             //    .SingleInstance();
             ////XamarRing.Base.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
-          
+
             InitHelpers();
             IsInitialized = true;
         }
@@ -108,5 +108,7 @@ namespace XamaRing.Core.Base
         {
             return AppContainer.Resolve<T>();
         }
+
+
     }
 }

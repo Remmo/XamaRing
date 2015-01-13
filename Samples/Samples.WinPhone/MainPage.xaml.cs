@@ -22,5 +22,7 @@ namespace Samples.WinPhone
             Forms.Init();
             Content = Samples.App.GetMainPage().ConvertPageToUIElement(this);
         }
+
+
     }
 }

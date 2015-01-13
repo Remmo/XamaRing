@@ -43,23 +43,23 @@
   <ItemGroup>
     <Reference Include="Acr.XamForms.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoAndroid\Acr.XamForms.Mobile.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.Mobile.2.0.0\lib\MonoAndroid10\Acr.XamForms.Mobile.dll</HintPath>
     </Reference>
     <Reference Include="Acr.XamForms.Mobile.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoAndroid\Acr.XamForms.Mobile.Droid.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.Mobile.2.0.0\lib\MonoAndroid10\Acr.XamForms.Mobile.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Acr.XamForms.UserDialogs, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.2.1.2\lib\MonoAndroid\Acr.XamForms.UserDialogs.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.UserDialogs.3.0.0\lib\MonoAndroid10\Acr.XamForms.UserDialogs.dll</HintPath>
     </Reference>
     <Reference Include="Acr.XamForms.UserDialogs.Droid, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.2.1.2\lib\MonoAndroid\Acr.XamForms.UserDialogs.Droid.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.UserDialogs.3.0.0\lib\MonoAndroid10\Acr.XamForms.UserDialogs.Droid.dll</HintPath>
     </Reference>
     <Reference Include="AndHUD, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.2.1.2\lib\MonoAndroid\AndHUD.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.UserDialogs.3.0.0\lib\MonoAndroid10\AndHUD.dll</HintPath>
     </Reference>
     <Reference Include="ExifLib">
       <HintPath>..\packages\ExifLib.PCL.1.0.0\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
@@ -105,7 +105,7 @@
     </Reference>
     <Reference Include="Xamarin.Mobile, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoAndroid\Xamarin.Mobile.dll</HintPath>
+      <HintPath>..\packages\Acr.XamForms.Mobile.2.0.0\lib\MonoAndroid10\Xamarin.Mobile.dll</HintPath>
     </Reference>
     <Reference Include="zxing.monoandroid, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

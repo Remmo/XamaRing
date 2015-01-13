@@ -14,12 +14,12 @@ namespace XamaRing
 {
     public static class CrossTools
     {
-        public static void InitializeUtility(INetworkService net, Xamarin.Forms.Labs.Services.Media.IMediaPicker pick)
+        public static void InitializeUtility(INetworkService net, IMediaPicker pick)
         {
             MediaSvc = pick;
             NetworkSvc = net;
         }
-        public static Xamarin.Forms.Labs.Services.Media.IMediaPicker MediaSvc;
+        public static IMediaPicker MediaSvc;
         public static INetworkService NetworkSvc;
 
         private static IBarCodeScanner barcodeScanner;
@@ -109,11 +109,16 @@ namespace XamaRing
         #region Themes
         public static void ApplyCrossTheme(StyleConfig config)
         {
-            if (applyTheme == null)
+#warning RIMUOVERE AL RILASCIO DELLA 1.3.1 di Labs
+
+            if (Device.OS != TargetPlatform.WinPhone)
             {
-                applyTheme = DependencyService.Get<IApplyTheme>();
+                if (applyTheme == null)
+                {
+                    applyTheme = DependencyService.Get<IApplyTheme>();
+                }
+                applyTheme.ApplyTheme(config);
             }
-            applyTheme.ApplyTheme(config);
             // applyTheme.ApplyTheme(
 
         }
