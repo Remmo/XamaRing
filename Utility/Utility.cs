@@ -111,7 +111,7 @@ namespace XamaRing
         {
 #warning RIMUOVERE AL RILASCIO DELLA 1.3.1 di Labs
 
-            if (Device.OS != TargetPlatform.WinPhone)
+            if (Device.OS == TargetPlatform.Android )
             {
                 if (applyTheme == null)
                 {
