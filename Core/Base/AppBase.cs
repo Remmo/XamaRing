@@ -62,17 +62,31 @@ namespace XamaRing.Core.Base
             IsInitialized = true;
             ResContainer = new SimpleContainer();
             //Resolver.SetResolver(ResContainer.GetResolver());
-            AppContainer = new ContainerBuilder()
-                //.RegisterViewModels()
-                //.RegisterXamDependency<IBarCodeScanner>()                
-                .RegisterXamDependency<INetworkService>()
-                .RegisterXamDependency<IDeviceInfo>()
-                .RegisterXamDependency<IUserDialogService>()
-                .RegisterXamDependency<IMailSender>()
-                .RegisterXamDependency<IAddContact>()
-                .RegisterXamDependency<ICallNumber>()
-                .RegisterXamDependency<IMediaPicker>()
-                .Build();
+            //if (InterfacesToRegister == null)
+            //{
+                AppContainer = new ContainerBuilder()
+                    //.RegisterViewModels()
+                    //.RegisterXamDependency<IBarCodeScanner>()                
+                    .RegisterXamDependency<INetworkService>()
+                    .RegisterXamDependency<IDeviceInfo>()
+                    .RegisterXamDependency<IUserDialogService>()
+                    .RegisterXamDependency<IMailSender>()
+                    .RegisterXamDependency<IAddContact>()
+                    .RegisterXamDependency<ICallNumber>()
+                    .RegisterXamDependency<IMediaPicker>()
+                    .RegisterXamDependency<Xamarin.Forms.Labs.Services.ISimpleCache>()
+
+                    .Build();
+            //}
+            //else
+            //{
+            //    var p = new ContainerBuilder();
+            //    foreach (var itf in InterfacesToRegister)
+            //    {
+            //        Type t = p.RegisterXamDependency<t>(p);
+                   
+            //    }
+            //}
 
             ////.RegisterXamDependency<ISignatureService>();
 

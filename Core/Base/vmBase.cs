@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Labs.Services;
 using XamaRing.Core.Helpers;
 
 namespace XamaRing.Core.Base
@@ -32,6 +33,18 @@ namespace XamaRing.Core.Base
                 return _navigation ?? AppBase.AppNavigator.Navigation;
             }
             set { _navigation = value; }
+        }
+        private ISimpleCache _cacheService;
+
+        public ISimpleCache CacheService
+        {
+            get
+            {
+                if(_cacheService==null)
+                    this._cacheService = Resolver.Resolve<ISimpleCache>();
+                return _cacheService;
+            }
+            set { _cacheService = value; }
         }
         public async Task ShowAlert(String message, String title = null, String okText = "OK")
         {
