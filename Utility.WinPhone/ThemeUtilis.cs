@@ -7,31 +7,13 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-using XamaRing.DependencyServices;
-using XamaRing.DependencyServices.Configs;
+using XamaRing.DS;
+using XamaRing.DS.Configs;
 
 
 [assembly: Xamarin.Forms.Dependency(typeof(XamaRing.Utility.WinPhone.ThemeUtils))]
 namespace XamaRing.Utility.WinPhone
-{
-    public static class WPExt
-    {
-        public static System.Windows.Media.Color ToWPColor(this Xamarin.Forms.Color xamColor)
-        {
-            return System.Windows.Media.Color.FromArgb(Convert.ToByte(xamColor.A * 255), Convert.ToByte(xamColor.R * 255), Convert.ToByte(xamColor.G * 255), Convert.ToByte(xamColor.B * 255));
-        }
-    }
-    public static class wpStyleKey
-    {
-        public static readonly String PhoneContrastBackgroundColor = "PhoneContrastBackgroundColor";
-        public static readonly String PhoneChromeColor = "PhoneChromeColor";
-        public static readonly String PhoneBackgroundColor = "PhoneBackgroundColor";
-        public static readonly String PhoneTextBoxColor = "PhoneTextBoxColor";
-        public static readonly String PhoneAccentColor = "PhoneAccentColor";
-        public static readonly String PhoneForegroundColor = "PhoneForegroundColor";
-
-
-    }
+{   
     public class ThemeUtils : IApplyTheme
     {
         public ThemeUtils() { }
@@ -121,6 +103,28 @@ namespace XamaRing.Utility.WinPhone
             if (config.AccentColor.HasValue)
                 ThemeManager.SetAccentColor(config.AccentColor.Value.ToWPColor());
             #endregion
+            #region TableViewDetailColor
+       
+            #endregion
         }
     }
+    public static class WPExt
+    {
+        public static System.Windows.Media.Color ToWPColor(this Xamarin.Forms.Color xamColor)
+        {
+            return System.Windows.Media.Color.FromArgb(Convert.ToByte(xamColor.A * 255), Convert.ToByte(xamColor.R * 255), Convert.ToByte(xamColor.G * 255), Convert.ToByte(xamColor.B * 255));
+        }
+    }
+    public static class wpStyleKey
+    {
+        public static readonly String PhoneContrastBackgroundColor = "PhoneContrastBackgroundColor";
+        public static readonly String PhoneChromeColor = "PhoneChromeColor";
+        public static readonly String PhoneBackgroundColor = "PhoneBackgroundColor";
+        public static readonly String PhoneTextBoxColor = "PhoneTextBoxColor";
+        public static readonly String PhoneAccentColor = "PhoneAccentColor";
+        public static readonly String PhoneForegroundColor = "PhoneForegroundColor";
+
+
+    }
+   
 }

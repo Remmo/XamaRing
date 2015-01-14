@@ -13,7 +13,7 @@ using XamaRing.Utility.iOS;
 namespace XamaRing.Utility.iOS
 {
     [Preserve]
-    public class NumberCaller : DependencyServices.ICallNumber
+    public class NumberCaller : DS.ICallNumber
     {
         public NumberCaller()
         {

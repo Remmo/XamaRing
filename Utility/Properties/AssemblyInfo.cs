@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Utility")]
+[assembly: AssemblyProduct("XamaRing.Utility")]
 [assembly: AssemblyCopyright("Copyright © Remmo 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

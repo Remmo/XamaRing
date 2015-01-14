@@ -9,9 +9,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using XamaRing.DependencyServices;
+using XamaRing.DS;
 using XamaRing;
-using XamaRing.DependencyServices.Configs;
+using XamaRing.DS.Configs;
 
 
 //using Acr.XamForms.Infrastructure;
@@ -52,7 +52,7 @@ namespace XamaRing.Core.Base
             XamaRing.Core.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
         }
 
-        static SimpleContainer ResContainer;
+        //static SimpleContainer ResContainer;
 
         public static void Init()
         {
@@ -60,7 +60,7 @@ namespace XamaRing.Core.Base
                 return;
 
             IsInitialized = true;
-            ResContainer = new SimpleContainer();
+            //ResContainer = new SimpleContainer();
             //Resolver.SetResolver(ResContainer.GetResolver());
             //if (InterfacesToRegister == null)
             //{
@@ -72,10 +72,9 @@ namespace XamaRing.Core.Base
                 .RegisterXamDependency<IUserDialogService>()
                 .RegisterXamDependency<IMailSender>()
                 .RegisterXamDependency<IAddContact>()
-                .RegisterXamDependency<ICallNumber>()              
+                .RegisterXamDependency<ICallNumber>()
                 .RegisterXamDependency<Acr.XamForms.Mobile.Media.IMediaPicker>()
                 .RegisterXamDependency<Xamarin.Forms.Labs.Services.ISimpleCache>()
-
                 .Build();
             //}
             //else

@@ -16,7 +16,7 @@ using Xamarin.Forms;
 [assembly: Xamarin.Forms.Dependency(typeof(XamaRing.Utility.Droid.ContactAdder))]
 namespace XamaRing.Utility.Droid
 {
-    public class ContactAdder : DependencyServices.IAddContact
+    public class ContactAdder : DS.IAddContact
     {
         AddressBook book;
         public ContactAdder()

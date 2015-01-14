@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 namespace XamaRing.Utility.WinPhone
 {
 
-    public class ImageResizer : DependencyServices.IImageResizer
+    public class ImageResizer : DS.IImageResizer
     {
         public ImageResizer()
         {

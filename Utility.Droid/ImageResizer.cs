@@ -15,7 +15,7 @@ using System.IO;
 [assembly: Xamarin.Forms.Dependency(typeof(XamaRing.Utility.Droid.ImageResizer))]
 namespace XamaRing.Utility.Droid
 {
-    public class ImageResizer : Java.Lang.Object, DependencyServices.IImageResizer
+    public class ImageResizer : Java.Lang.Object, DS.IImageResizer
     {
 
         //    x: y = z : q 

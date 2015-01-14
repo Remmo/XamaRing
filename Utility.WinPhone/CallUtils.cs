@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace XamaRing.Utility.WinPhone
 {
 
-    public class NumberCaller : DependencyServices.ICallNumber
+    public class NumberCaller : DS.ICallNumber
     {
         public NumberCaller()
         {

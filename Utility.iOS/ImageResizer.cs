@@ -12,7 +12,7 @@ using XamaRing.Utility.iOS;
 namespace XamaRing.Utility.iOS
 {
     [Preserve]
-    public class ImageResizer : DependencyServices.IImageResizer
+    public class ImageResizer : DS.IImageResizer
     {
 
         public ImageResizer()

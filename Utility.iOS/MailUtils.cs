@@ -15,7 +15,7 @@ using XamaRing.Utility.iOS;
 namespace XamaRing.Utility.iOS
 {
     [Preserve]
-    public class MailSender : DependencyServices.IMailSender
+    public class MailSender : DS.IMailSender
     {
         MFMailComposeViewController _mailController;
         public MailSender()

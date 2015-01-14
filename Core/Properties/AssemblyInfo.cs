@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Core of XamaRing Framework")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Alessio Simoni")]
-[assembly: AssemblyProduct("Core")]
+[assembly: AssemblyProduct("XamaRing.Core")]
 [assembly: AssemblyCopyright("Copyright © Alessio Simoni 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

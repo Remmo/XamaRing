@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 
-namespace XamaRing.DependencyServices.Configs
+namespace XamaRing.DS.Configs
 {
     public class StyleConfig
     {
@@ -82,6 +82,13 @@ namespace XamaRing.DependencyServices.Configs
             set { wpPhoneForegroundColor = value; }
         }
 
+        private Color? tableViewDetailColor;
+        public Color? TableViewDetailColor
+        {
+            get { return tableViewDetailColor; }
+            set { tableViewDetailColor = value; }
+        }
+        
         
 
         private Color? entryBackgroundColor;

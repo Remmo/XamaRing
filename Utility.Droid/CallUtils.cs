@@ -14,7 +14,7 @@ using Xamarin.Forms;
 [assembly: Xamarin.Forms.Dependency(typeof(XamaRing.Utility.Droid.NumberCaller))]
 namespace XamaRing.Utility.Droid
 {
-    public class NumberCaller : Java.Lang.Object, DependencyServices.ICallNumber
+    public class NumberCaller : Java.Lang.Object, DS.ICallNumber
     {
 
 

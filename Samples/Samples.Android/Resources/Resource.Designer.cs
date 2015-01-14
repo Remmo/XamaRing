@@ -109,6 +109,86 @@ namespace Samples.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::Samples.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::Samples.Droid.Resource.String.Hello;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_active_month_bg = global::Samples.Droid.Resource.Color.calendar_active_month_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_bg = global::Samples.Droid.Resource.Color.calendar_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_divider = global::Samples.Droid.Resource.Color.calendar_divider;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_highlighted_day_bg = global::Samples.Droid.Resource.Color.calendar_highlighted_day_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_inactive_month_bg = global::Samples.Droid.Resource.Color.calendar_inactive_month_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_selected_day_bg = global::Samples.Droid.Resource.Color.calendar_selected_day_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_selected_range_bg = global::Samples.Droid.Resource.Color.calendar_selected_range_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_active = global::Samples.Droid.Resource.Color.calendar_text_active;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_inactive = global::Samples.Droid.Resource.Color.calendar_text_inactive;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_selected = global::Samples.Droid.Resource.Color.calendar_text_selected;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_selector = global::Samples.Droid.Resource.Color.calendar_text_selector;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_unselectable = global::Samples.Droid.Resource.Color.calendar_text_unselectable;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_day_headers_paddingbottom = global::Samples.Droid.Resource.Dimension.calendar_day_headers_paddingbottom;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_month_title_bottommargin = global::Samples.Droid.Resource.Dimension.calendar_month_title_bottommargin;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_month_topmargin = global::Samples.Droid.Resource.Dimension.calendar_month_topmargin;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_text_medium = global::Samples.Droid.Resource.Dimension.calendar_text_medium;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_text_small = global::Samples.Droid.Resource.Dimension.calendar_text_small;
+			global::Xamarin.Forms.Labs.Droid.Resource.Drawable.ad16 = global::Samples.Droid.Resource.Drawable.ad16;
+			global::Xamarin.Forms.Labs.Droid.Resource.Drawable.calendar_bg_selector = global::Samples.Droid.Resource.Drawable.calendar_bg_selector;
+			global::Xamarin.Forms.Labs.Droid.Resource.Id.calendar_grid = global::Samples.Droid.Resource.Id.calendar_grid;
+			global::Xamarin.Forms.Labs.Droid.Resource.Id.calendar_view = global::Samples.Droid.Resource.Id.calendar_view;
+			global::Xamarin.Forms.Labs.Droid.Resource.Id.title = global::Samples.Droid.Resource.Id.title;
+			global::Xamarin.Forms.Labs.Droid.Resource.Layout.calendar_picker = global::Samples.Droid.Resource.Layout.calendar_picker;
+			global::Xamarin.Forms.Labs.Droid.Resource.Layout.dialog = global::Samples.Droid.Resource.Layout.dialog;
+			global::Xamarin.Forms.Labs.Droid.Resource.Layout.month = global::Samples.Droid.Resource.Layout.month;
+			global::Xamarin.Forms.Labs.Droid.Resource.Layout.week = global::Samples.Droid.Resource.Layout.week;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.day_name_format = global::Samples.Droid.Resource.String.day_name_format;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.full_date_format = global::Samples.Droid.Resource.String.full_date_format;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.invalid_date = global::Samples.Droid.Resource.String.invalid_date;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.library_name = global::Samples.Droid.Resource.String.library_name;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.month_name_format = global::Samples.Droid.Resource.String.month_name_format;
+			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarCell = global::Samples.Droid.Resource.Style.CalendarCell;
+			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarCell_CalendarDate = global::Samples.Droid.Resource.Style.CalendarCell_CalendarDate;
+			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarCell_DayHeader = global::Samples.Droid.Resource.Style.CalendarCell_DayHeader;
+			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarTitle = global::Samples.Droid.Resource.Style.CalendarTitle;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahBarColor = global::Samples.Droid.Resource.Attribute.ahBarColor;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahBarLength = global::Samples.Droid.Resource.Attribute.ahBarLength;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahBarWidth = global::Samples.Droid.Resource.Attribute.ahBarWidth;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahCircleColor = global::Samples.Droid.Resource.Attribute.ahCircleColor;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahDelayMillis = global::Samples.Droid.Resource.Attribute.ahDelayMillis;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahRadius = global::Samples.Droid.Resource.Attribute.ahRadius;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahRimColor = global::Samples.Droid.Resource.Attribute.ahRimColor;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahRimWidth = global::Samples.Droid.Resource.Attribute.ahRimWidth;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahSpinSpeed = global::Samples.Droid.Resource.Attribute.ahSpinSpeed;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahText = global::Samples.Droid.Resource.Attribute.ahText;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahTextColor = global::Samples.Droid.Resource.Attribute.ahTextColor;
+			global::XamaRing.Utility.Droid.Resource.Attribute.ahTextSize = global::Samples.Droid.Resource.Attribute.ahTextSize;
+			global::XamaRing.Utility.Droid.Resource.Drawable.effe = global::Samples.Droid.Resource.Drawable.effe;
+			global::XamaRing.Utility.Droid.Resource.Drawable.ic_errorstatus = global::Samples.Droid.Resource.Drawable.ic_errorstatus;
+			global::XamaRing.Utility.Droid.Resource.Drawable.ic_successstatus = global::Samples.Droid.Resource.Drawable.ic_successstatus;
+			global::XamaRing.Utility.Droid.Resource.Drawable.roundedbg = global::Samples.Droid.Resource.Drawable.roundedbg;
+			global::XamaRing.Utility.Droid.Resource.Drawable.roundedbgdark = global::Samples.Droid.Resource.Drawable.roundedbgdark;
+			global::XamaRing.Utility.Droid.Resource.Id.contentFrame = global::Samples.Droid.Resource.Id.contentFrame;
+			global::XamaRing.Utility.Droid.Resource.Id.loadingImage = global::Samples.Droid.Resource.Id.loadingImage;
+			global::XamaRing.Utility.Droid.Resource.Id.loadingProgressBar = global::Samples.Droid.Resource.Id.loadingProgressBar;
+			global::XamaRing.Utility.Droid.Resource.Id.loadingProgressWheel = global::Samples.Droid.Resource.Id.loadingProgressWheel;
+			global::XamaRing.Utility.Droid.Resource.Id.textViewStatus = global::Samples.Droid.Resource.Id.textViewStatus;
+			global::XamaRing.Utility.Droid.Resource.Layout.loading = global::Samples.Droid.Resource.Layout.loading;
+			global::XamaRing.Utility.Droid.Resource.Layout.loadingimage = global::Samples.Droid.Resource.Layout.loadingimage;
+			global::XamaRing.Utility.Droid.Resource.Layout.loadingprogress = global::Samples.Droid.Resource.Layout.loadingprogress;
+			global::XamaRing.Utility.Droid.Resource.Layout.zxingscanneractivitylayout = global::Samples.Droid.Resource.Layout.zxingscanneractivitylayout;
+			global::XamaRing.Utility.Droid.Resource.Layout.zxingscannerfragmentlayout = global::Samples.Droid.Resource.Layout.zxingscannerfragmentlayout;
+			global::XamaRing.Utility.Droid.Resource.String.ApplicationName = global::Samples.Droid.Resource.String.ApplicationName;
+			global::XamaRing.Utility.Droid.Resource.String.Hello = global::Samples.Droid.Resource.String.Hello;
+			global::XamaRing.Utility.Droid.Resource.String.library_name = global::Samples.Droid.Resource.String.library_name;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel = global::Samples.Droid.Resource.Styleable.ProgressWheel;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahBarColor = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahBarColor;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahBarLength = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahBarLength;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahBarWidth = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahBarWidth;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahCircleColor = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahCircleColor;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahDelayMillis = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahDelayMillis;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahRadius = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahRadius;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahRimColor = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahRimColor;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahRimWidth = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahRimWidth;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahSpinSpeed = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahSpinSpeed;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahText = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahText;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahTextColor = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
+			global::XamaRing.Utility.Droid.Resource.Styleable.ProgressWheel_ahTextSize = global::Samples.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
 			global::ZXing.Mobile.Resource.Id.contentFrame = global::Samples.Droid.Resource.Id.contentFrame;
 			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::Samples.Droid.Resource.Layout.zxingscanneractivitylayout;
 			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::Samples.Droid.Resource.Layout.zxingscannerfragmentlayout;
@@ -163,23 +243,109 @@ namespace Samples.Droid
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int calendar_active_month_bg = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int calendar_bg = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int calendar_divider = 2130968578;
+			
+			// aapt resource value: 0x7f040005
+			public const int calendar_highlighted_day_bg = 2130968581;
+			
+			// aapt resource value: 0x7f040003
+			public const int calendar_inactive_month_bg = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int calendar_selected_day_bg = 2130968580;
+			
+			// aapt resource value: 0x7f040006
+			public const int calendar_selected_range_bg = 2130968582;
+			
+			// aapt resource value: 0x7f040008
+			public const int calendar_text_active = 2130968584;
+			
+			// aapt resource value: 0x7f040007
+			public const int calendar_text_inactive = 2130968583;
+			
+			// aapt resource value: 0x7f040009
+			public const int calendar_text_selected = 2130968585;
+			
+			// aapt resource value: 0x7f04000b
+			public const int calendar_text_selector = 2130968587;
+			
+			// aapt resource value: 0x7f04000a
+			public const int calendar_text_unselectable = 2130968586;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
+		public partial class Dimension
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int calendar_day_headers_paddingbottom = 2131034112;
+			
+			// aapt resource value: 0x7f050002
+			public const int calendar_month_title_bottommargin = 2131034114;
+			
+			// aapt resource value: 0x7f050001
+			public const int calendar_month_topmargin = 2131034113;
+			
+			// aapt resource value: 0x7f050003
+			public const int calendar_text_medium = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int calendar_text_small = 2131034116;
+			
+			static Dimension()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Dimension()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int ic_errorstatus = 2130837504;
+			public const int ad16 = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ic_successstatus = 2130837505;
+			public const int calendar_bg_selector = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int effe = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int roundedbg = 2130837507;
+			public const int ic_errorstatus = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int roundedbgdark = 2130837508;
+			public const int ic_successstatus = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int Icon = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int roundedbg = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int roundedbgdark = 2130837511;
 			
 			static Drawable()
 			{
@@ -194,20 +360,29 @@ namespace Samples.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050004
-			public const int contentFrame = 2131034116;
+			// aapt resource value: 0x7f080006
+			public const int calendar_grid = 2131230726;
 			
-			// aapt resource value: 0x7f050002
-			public const int loadingImage = 2131034114;
+			// aapt resource value: 0x7f080000
+			public const int calendar_view = 2131230720;
 			
-			// aapt resource value: 0x7f050000
-			public const int loadingProgressBar = 2131034112;
+			// aapt resource value: 0x7f080007
+			public const int contentFrame = 2131230727;
 			
-			// aapt resource value: 0x7f050003
-			public const int loadingProgressWheel = 2131034115;
+			// aapt resource value: 0x7f080003
+			public const int loadingImage = 2131230723;
 			
-			// aapt resource value: 0x7f050001
-			public const int textViewStatus = 2131034113;
+			// aapt resource value: 0x7f080001
+			public const int loadingProgressBar = 2131230721;
+			
+			// aapt resource value: 0x7f080004
+			public const int loadingProgressWheel = 2131230724;
+			
+			// aapt resource value: 0x7f080002
+			public const int textViewStatus = 2131230722;
+			
+			// aapt resource value: 0x7f080005
+			public const int title = 2131230725;
 			
 			static Id()
 			{
@@ -223,19 +398,31 @@ namespace Samples.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int loading = 2130903040;
+			public const int calendar_picker = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int loadingimage = 2130903041;
+			public const int dialog = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int loadingprogress = 2130903042;
+			public const int loading = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int zxingscanneractivitylayout = 2130903043;
+			public const int loadingimage = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int zxingscannerfragmentlayout = 2130903044;
+			public const int loadingprogress = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int month = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int week = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int zxingscanneractivitylayout = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int zxingscannerfragmentlayout = 2130903048;
 			
 			static Layout()
 			{
@@ -250,14 +437,26 @@ namespace Samples.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int ApplicationName = 2130968578;
+			// aapt resource value: 0x7f060006
+			public const int ApplicationName = 2131099654;
 			
-			// aapt resource value: 0x7f040001
-			public const int Hello = 2130968577;
+			// aapt resource value: 0x7f060005
+			public const int Hello = 2131099653;
 			
-			// aapt resource value: 0x7f040000
-			public const int library_name = 2130968576;
+			// aapt resource value: 0x7f060001
+			public const int day_name_format = 2131099649;
+			
+			// aapt resource value: 0x7f060004
+			public const int full_date_format = 2131099652;
+			
+			// aapt resource value: 0x7f060002
+			public const int invalid_date = 2131099650;
+			
+			// aapt resource value: 0x7f060000
+			public const int library_name = 2131099648;
+			
+			// aapt resource value: 0x7f060003
+			public const int month_name_format = 2131099651;
 			
 			static String()
 			{
@@ -265,6 +464,31 @@ namespace Samples.Droid
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f070001
+			public const int CalendarCell = 2131165185;
+			
+			// aapt resource value: 0x7f070003
+			public const int CalendarCell_CalendarDate = 2131165187;
+			
+			// aapt resource value: 0x7f070002
+			public const int CalendarCell_DayHeader = 2131165186;
+			
+			// aapt resource value: 0x7f070000
+			public const int CalendarTitle = 2131165184;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

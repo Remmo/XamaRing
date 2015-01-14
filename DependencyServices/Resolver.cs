@@ -4,7 +4,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace XamaRing.DependencyServices
+//namespace XamaRing.DS
 //{
 
 //    /// <summary>

@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace XamaRing.DependencyServices.BarCodeScanner
+namespace XamaRing.DS.BarCodeScanner
 {
     
     public class BarCodeResult {

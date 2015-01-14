@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace XamaRing.DependencyServices.BarCodeScanner
+namespace XamaRing.DS.BarCodeScanner
 {
     
     public class BarCodeScannerConfiguration {

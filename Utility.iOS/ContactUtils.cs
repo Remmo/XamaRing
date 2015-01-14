@@ -16,7 +16,7 @@ using XamaRing.Utility.iOS;
 namespace XamaRing.Utility.iOS
 {
     [Preserve]
-    public  class ContactAdder : DependencyServices.IAddContact
+    public  class ContactAdder : DS.IAddContact
     {
         ABNewPersonViewController _newPersonController;
         public ContactAdder()

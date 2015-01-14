@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using XamaRing.DependencyServices.BarCodeScanner;
-using XamaRing.DependencyServices.Configs;
+using XamaRing.DS.BarCodeScanner;
+using XamaRing.DS.Configs;
 
-namespace XamaRing.DependencyServices
+namespace XamaRing.DS
 {
     public interface IMailSender
     {

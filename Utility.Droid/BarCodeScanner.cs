@@ -5,8 +5,8 @@ using Xamarin.Forms;
 using ZXing;
 using ZXing.Mobile;
 
-using XamaRing.DependencyServices.BarCodeScanner;
-using XamaRing.DependencyServices;
+using XamaRing.DS.BarCodeScanner;
+using XamaRing.DS;
 
 [assembly: Dependency(typeof(XamaRing.Utility.Droid.BarCodeScanner))]
 namespace XamaRing.Utility.Droid

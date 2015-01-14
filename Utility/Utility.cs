@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using XamaRing.DependencyServices;
-using XamaRing.DependencyServices.Configs;
+using XamaRing.DS;
+using XamaRing.DS.Configs;
 
 
 namespace XamaRing
@@ -111,14 +111,14 @@ namespace XamaRing
         {
 #warning RIMUOVERE AL RILASCIO DELLA 1.3.1 di Labs
 
-            if (Device.OS == TargetPlatform.Android )
-            {
+            //if (Device.OS == TargetPlatform.Android )
+            //{
                 if (applyTheme == null)
                 {
                     applyTheme = DependencyService.Get<IApplyTheme>();
                 }
                 applyTheme.ApplyTheme(config);
-            }
+            //}
             // applyTheme.ApplyTheme(
 
         }

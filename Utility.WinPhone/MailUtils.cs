@@ -8,7 +8,7 @@ using System.Text;
 [assembly:  Xamarin.Forms.Dependency(typeof(XamaRing.Utility.WinPhone.MailSender))]
 namespace XamaRing.Utility.WinPhone
 {
-    public class MailSender : DependencyServices.IMailSender
+    public class MailSender : DS.IMailSender
     {
         public MailSender() { }
 

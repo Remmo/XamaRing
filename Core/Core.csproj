@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Base\AppBase.cs" />
+    <Compile Include="Base\ContentPageBase.cs" />
     <Compile Include="Base\ViewBase.cs" />
     <Compile Include="Base\vmBase.cs" />
     <Compile Include="Converters\StringToEnumConverter.cs" />

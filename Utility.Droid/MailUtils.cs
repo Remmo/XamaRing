@@ -13,7 +13,7 @@ using Xamarin.Forms;
 [assembly: Xamarin.Forms.Dependency(typeof(XamaRing.Utility.Droid.MailSender))]
 namespace XamaRing.Utility.Droid
 {
-    public class MailSender : Java.Lang.Object, XamaRing.DependencyServices.IMailSender
+    public class MailSender : Java.Lang.Object, XamaRing.DS.IMailSender
     {
         public MailSender() { }
         public void SendMail(List<string> to, List<string> cc, string subject, string body)

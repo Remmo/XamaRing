@@ -5,19 +5,20 @@ using System.Text;
 
 using Xamarin.Forms;
 using XamaRing.Core.Base;
-using XamaRing.DependencyServices.Configs;
+using XamaRing.DS.Configs;
 
 namespace Samples
 {
-    public class App
+    public class App : Xamarin.Forms.Application
     {
-        public static Page GetMainPage()
+        public App()
         {
             XamaRing.Core.Base.AppBase.Init();
             manageTheme();
             AppBase.AppNavigator = new NavigationPage(new Samples.Views.MainView());
-            return AppBase.AppNavigator;
+            MainPage = AppBase.AppNavigator;
         }
+        
         private static void manageTheme()
         {
             StyleConfig cfg = new StyleConfig();

@@ -10,9 +10,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-using XamaRing.DependencyServices;
+using XamaRing.DS;
 using XamaRing.Utility.Droid;
-using XamaRing.DependencyServices.Configs;
+using XamaRing.DS.Configs;
 
 
 [assembly: Xamarin.Forms.Dependency(typeof(ThemeUtils))]

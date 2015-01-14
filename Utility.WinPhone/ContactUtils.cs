@@ -10,7 +10,7 @@ using System.Windows;
 namespace XamaRing.Utility.WinPhone
 {
     
-    public class ContactAdder : DependencyServices.IAddContact
+    public class ContactAdder : DS.IAddContact
     {
         SaveContactTask saveContactTask;
         public ContactAdder()

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Controls of XamaRing Framework")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Alessio Simoni")]
-[assembly: AssemblyProduct("Xamaring Controls")]
+[assembly: AssemblyProduct("Xamaring.Controls")]
 [assembly: AssemblyCopyright("Copyright © Alessio Simoni 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

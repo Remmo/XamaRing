@@ -49,6 +49,7 @@
     <Compile Include="iOSHelpers.cs" />
     <Compile Include="MailUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.XamForms.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
