@@ -68,24 +68,7 @@ namespace XamaRing.Core.Base
             }
             CrossTools.ApplyCrossTheme(cfgTheme);
         }
-        public StackLayout GetTitoloWP(string Titolo, Font TitoloFont, Color ColoreRiempimento, Color ColoreFont)
-        {
-            Label lbl = new Label();
-            lbl.Text = Titolo;
-            lbl.Font = TitoloFont;
-            lbl.HorizontalOptions = LayoutOptions.CenterAndExpand;
-            lbl.VerticalOptions = LayoutOptions.Start;
-            lbl.XAlign = TextAlignment.Center;
-            lbl.YAlign = TextAlignment.Center;
-            lbl.TextColor = ColoreFont;
-            StackLayout frame = new StackLayout();
-            frame.HeightRequest = 50;
-            frame.BackgroundColor = ColoreRiempimento;
-            frame.HorizontalOptions = LayoutOptions.FillAndExpand;
-            frame.VerticalOptions = LayoutOptions.Start;
-            frame.Children.Add(lbl);
-            return frame;
-        }
+       
 
 
     }
