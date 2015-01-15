@@ -26,6 +26,9 @@ namespace XamaRing.Core.Base
             CustomPageStyle.WPPhoneContrastBackgroundColor = app.WPPhoneContrastBackgroundColor;
             CustomPageStyle.AccentColor = app.AccentColor;
             CustomPageStyle.WPPhoneForegroundColor = app.WPPhoneForegroundColor;
+            CustomPageStyle.WPPhoneTextLowContrast = app.WPPhoneTextLowContrast;
+            CustomPageStyle.WPPhoneTextMidContrast = app.WPPhoneTextMidContrast;
+            CustomPageStyle.WPPhoneTextHighContrast = app.WPPhoneTextHighContrast;
             CustomPageStyle.TableViewDetailColor = app.TableViewDetailColor;
             if (Device.OS == TargetPlatform.Android)
             {

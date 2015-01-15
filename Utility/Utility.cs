@@ -109,18 +109,13 @@ namespace XamaRing
         #region Themes
         public static void ApplyCrossTheme(StyleConfig config)
         {
-#warning RIMUOVERE AL RILASCIO DELLA 1.3.1 di Labs
 
-            //if (Device.OS == TargetPlatform.Android )
-            //{
                 if (applyTheme == null)
                 {
                     applyTheme = DependencyService.Get<IApplyTheme>();
                 }
                 applyTheme.ApplyTheme(config);
-            //}
-            // applyTheme.ApplyTheme(
-
+            
         }
         #endregion
 

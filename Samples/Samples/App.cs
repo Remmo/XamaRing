@@ -15,26 +15,26 @@ namespace Samples
         {
             XamaRing.Core.Base.AppBase.Init();
             manageTheme();
-            AppBase.AppNavigator = new NavigationPage(new Samples.Views.MainView());
+            AppBase.AppNavigator = new NavigationPage(new Project.Views.MainView());
             MainPage = AppBase.AppNavigator;
         }
         
         private static void manageTheme()
         {
             StyleConfig cfg = new StyleConfig();
-            if (Device.OS == TargetPlatform.WinPhone)
-            {
-                cfg.BgColor = Color.White;
-                cfg.WPPhoneChromeColor = Color.FromHex("#2faeb5");
-                cfg.WPPhoneForegroundColor = Color.White;
-                cfg.EntryBackgroundColor = Color.Silver;
-                cfg.WPLightTheme = true;
-                //cfg.AccentColor = Color.FromHex("#dd3f18");
-            }
-            else if (Device.OS == TargetPlatform.Android)
-            {
-                cfg.BgColor = Color.White;
-            }
+            //if (Device.OS == TargetPlatform.WinPhone)
+            //{
+            //    cfg.BgColor = Color.White;
+            //    cfg.WPPhoneChromeColor = Color.FromHex("#2faeb5");
+            //    cfg.WPPhoneForegroundColor = Color.White;
+            //    cfg.EntryBackgroundColor = Color.Silver;
+            //    cfg.WPLightTheme = true;
+            //    //cfg.AccentColor = Color.FromHex("#dd3f18");
+            //}
+            //else if (Device.OS == TargetPlatform.Android)
+            //{
+            //    cfg.BgColor = Color.White;
+            //}
             AppBase.SetCrossStyle(cfg);
         }
     }

@@ -1,10 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<base:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:base="clr-namespace:XamaRing.Core.Base;assembly=XamaRing.Core.Base"
 					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-					   x:Class="Samples.Views.MainView">
-  <StackLayout Orientation="Vertical">
-    <Button Text="ApriPopup" Command="{Binding PopupCommand}"/>
-    <Button Text="ApriPagina" Command="{Binding PaginaCommand}"/>
-    <Button Text="ApriAlert" Command="{Binding AlertCommand}"/>
-  </StackLayout>
-</ContentPage>
+                  xmlns:d="clr-namespace:Xamarin.Forms.EIDOS.Base.UserControls;assembly=Xamarin.Forms.EIDOS.Base"
+					   x:Class="Project.Views.MainView" >
+
+
+  <Grid x:Name="grdContainer" HorizontalOptions="Center" VerticalOptions="Center">
+    <Grid x:Name="grdLogin"  IsVisible="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <!--<Frame BackgroundColor="White">-->
+      <d:Login x:Name="login" ></d:Login>
+      <!--</Frame>-->
+    </Grid>
+    <Grid x:Name="grdMain" IsVisible="false" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+      <StackLayout x:Name="stackMain" >
+        <StackLayout.Spacing>
+          <OnPlatform x:TypeArguments="x:Double"
+                 WinPhone="0" />
+        </StackLayout.Spacing>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+
+          <StackLayout.Padding>
+            <OnPlatform x:TypeArguments="Thickness"
+                   WinPhone="0, 0, 0, 20" />
+          </StackLayout.Padding>
+          <Label Text="Visualizza solo 'Sblocca Italia'" Font="Large" x:Name="lblSbloccaItalia"  VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" TextColor="Black"/>
+          <Switch x:Name="swSbloccaItalia"  IsToggled="{Binding SbloccaItalia}" />
+        </StackLayout>
+        <Label x:Name="lblNoData" IsVisible="false" Text="Nessun dato da visualizzare" VerticalOptions="Center"/>
+        <ListView    x:Name="prjList" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" ItemsSource="{Binding ListaProgetti}" SelectedItem="{Binding ProgettoSelezionato}">
+          <!--<ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <ViewCell.View>
+                  <StackLayout  Orientation="Horizontal">
+                    <Label Text="{Binding PriojectName}"/>
+                    <Label Text="{Binding PercCompletamento}"/>
+                    <Label Text="{Binding StatoGara}"/>
+                    <Label Text="{Binding CodiceGara}"/>
+                  </StackLayout>
+                </ViewCell.View>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>-->
+        </ListView>
+      </StackLayout>
+    </Grid>
+  </Grid>
+</base:ContentPageBase>

@@ -56,6 +56,19 @@ namespace XamaRing.Utility.WinPhone
                 if (config.WPPhoneForegroundColor.HasValue)
                     this.addOrChangeStyle(config.WPPhoneForegroundColor.Value.ToWPColor(), wpStyleKey.PhoneForegroundColor);
                 #endregion
+
+                #region PhoneTextLowContrast
+                if (config.WPPhoneTextLowContrast.HasValue)
+                    this.addOrChangeStyle(config.WPPhoneTextLowContrast.Value.ToWPColor(), wpStyleKey.PhoneTextLowContrast);
+                #endregion
+                #region PhoneTextMidContrast
+                if (config.WPPhoneTextMidContrast.HasValue)
+                    this.addOrChangeStyle(config.WPPhoneTextMidContrast.Value.ToWPColor(), wpStyleKey.PhoneTextMidContrast);
+                #endregion
+                #region PhoneTextHighContrast
+                if (config.WPPhoneTextHighContrast.HasValue)
+                    this.addOrChangeStyle(config.WPPhoneTextHighContrast.Value.ToWPColor(), wpStyleKey.PhoneTextHighContrast);
+                #endregion
                 //#region Button
                 //if (config.ButtonColor.HasValue)
                 //    this.addOrChangeStyle(config.ButtonColor.Value.ToWPColor(), wpStyleKey.PhoneContrastBackgroundColor);
@@ -101,7 +114,7 @@ namespace XamaRing.Utility.WinPhone
             ThemeManager.SetCustomTheme(dictionary, config.WPLightTheme ? Theme.Light : Theme.Dark);
             #region AccentColor
             if (config.AccentColor.HasValue)
-                ThemeManager.SetAccentColor(config.AccentColor.Value.ToWPColor());
+                ThemeManager.SetAccentColor(config.AccentColor.Value.ToWPColor());            
             #endregion
             #region TableViewDetailColor
        
@@ -123,6 +136,10 @@ namespace XamaRing.Utility.WinPhone
         public static readonly String PhoneTextBoxColor = "PhoneTextBoxColor";
         public static readonly String PhoneAccentColor = "PhoneAccentColor";
         public static readonly String PhoneForegroundColor = "PhoneForegroundColor";
+
+        public static readonly String PhoneTextLowContrast = "PhoneTextLowContrast";
+        public static readonly String PhoneTextMidContrast = "PhoneTextMidContrast";
+        public static readonly String PhoneTextHighContrast = "PhoneTextHighContrast";
 
 
     }

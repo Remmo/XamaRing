@@ -1,10 +1,11 @@
-﻿using MonoTouch.CoreGraphics;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+﻿using CoreGraphics;
+using Foundation;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+
 using System.Text;
+using UIKit;
 using Xamarin.Forms;
 using XamaRing.Utility.iOS;
 
@@ -36,7 +37,7 @@ namespace XamaRing.Utility.iOS
                 // draw the image
                 context.DrawImage(imageRect, originalImage.CGImage);
 
-                MonoTouch.UIKit.UIImage resizedImage = MonoTouch.UIKit.UIImage.FromImage(context.ToImage());
+                UIImage resizedImage = UIImage.FromImage(context.ToImage());
 
                 // save the image as a jpeg
                 return resizedImage.AsJPEG().ToArray();
@@ -60,7 +61,7 @@ namespace XamaRing.Utility.iOS
                 // draw the image
                 context.DrawImage(imageRect, originalImage.CGImage);
 
-                MonoTouch.UIKit.UIImage resizedImage = MonoTouch.UIKit.UIImage.FromImage(context.ToImage());
+               UIImage resizedImage = UIImage.FromImage(context.ToImage());
 
                 // save the image as a jpeg
                 return resizedImage.AsJPEG().ToArray();
@@ -85,7 +86,7 @@ namespace XamaRing.Utility.iOS
                 // draw the image
                 context.DrawImage(imageRect, originalImage.CGImage);
 
-                MonoTouch.UIKit.UIImage resizedImage = MonoTouch.UIKit.UIImage.FromImage(context.ToImage());
+                UIImage resizedImage = UIImage.FromImage(context.ToImage());
 
                 // save the image as a jpeg
                 return resizedImage.AsJPEG().ToArray();
@@ -109,24 +110,24 @@ namespace XamaRing.Utility.iOS
                 // draw the image
                 context.DrawImage(imageRect, originalImage.CGImage);
 
-                MonoTouch.UIKit.UIImage resizedImage = MonoTouch.UIKit.UIImage.FromImage(context.ToImage());
+               UIImage resizedImage =UIImage.FromImage(context.ToImage());
 
                 // save the image as a jpeg
                 return resizedImage.AsJPEG().ToArray();
             }
         }
 
-        public static MonoTouch.UIKit.UIImage ImageFromByteArray(byte[] data)
+        public static  UIImage ImageFromByteArray(byte[] data)
         {
             if (data == null)
             {
                 return null;
             }
 
-            MonoTouch.UIKit.UIImage image;
+            UIImage image;
             try
             {
-                image = new MonoTouch.UIKit.UIImage(MonoTouch.Foundation.NSData.FromArray(data));
+                image = new UIImage(Foundation.NSData.FromArray(data));
             }
             catch (Exception e)
             {

@@ -82,6 +82,32 @@ namespace XamaRing.DS.Configs
             set { wpPhoneForegroundColor = value; }
         }
 
+        private Color? wpPhoneTextLowContrast;
+
+        public Color? WPPhoneTextLowContrast
+        {
+            get { return wpPhoneTextLowContrast; }
+            set { wpPhoneTextLowContrast = value; }
+        }
+
+        private Color? wpPhoneTextMidContrast;
+
+        public Color? WPPhoneTextMidContrast
+        {
+            get { return wpPhoneTextMidContrast; }
+            set { wpPhoneTextMidContrast = value; }
+        }
+
+        private Color? wpPhoneTextHighContrast;
+
+        public Color? WPPhoneTextHighContrast
+        {
+            get { return wpPhoneTextHighContrast; }
+            set { wpPhoneTextHighContrast = value; }
+        }
+
+
+
         private Color? tableViewDetailColor;
         public Color? TableViewDetailColor
         {
