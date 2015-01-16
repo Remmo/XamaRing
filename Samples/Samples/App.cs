@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Samples.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
 using XamaRing.Core.Base;
 using XamaRing.DS.Configs;
@@ -15,7 +15,7 @@ namespace Samples
         {
             XamaRing.Core.Base.AppBase.Init();
             manageTheme();
-            AppBase.AppNavigator = new NavigationPage(new Project.Views.MainView());
+            AppBase.AppNavigator = new NavigationPage(new MainView());
             MainPage = AppBase.AppNavigator;
         }
         
@@ -35,7 +35,7 @@ namespace Samples
             //{
             //    cfg.BgColor = Color.White;
             //}
-            AppBase.SetCrossStyle(cfg);
+            //AppBase.SetCrossStyle(cfg);
         }
     }
 }

@@ -164,10 +164,6 @@
       <Project>{83e52e84-6489-41e5-bfe4-2c762d50739e}</Project>
       <Name>Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\DependencyServices\DependencyServices.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
-      <Name>DependencyServices</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Utility.WinPhone\Utility.WinPhone.csproj">
       <Project>{84e0e9e3-ee65-4b89-b0de-e9559603db6c}</Project>
       <Name>Utility.WinPhone</Name>
@@ -177,6 +173,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Acr.XamForms.BarCodeScanner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Acr.XamForms.BarCodeScanner.2.0.0\lib\wp8\Acr.XamForms.BarCodeScanner.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.XamForms.BarCodeScanner.WindowsPhone">
+      <HintPath>..\..\packages\Acr.XamForms.BarCodeScanner.2.0.0\lib\wp8\Acr.XamForms.BarCodeScanner.WindowsPhone.dll</HintPath>
+    </Reference>
     <Reference Include="Acr.XamForms.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.0\lib\wp8\Acr.XamForms.Mobile.dll</HintPath>

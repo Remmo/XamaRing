@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Samples.Views.ServicesView">
+  <StackLayout Orientation="Vertical">
+    <Button Text="Read Barcode" Command="{Binding OnReadBarcode}"/>
+    <!--<Button Text="ApriPagina" Command="{Binding PaginaCommand}"/>
+    <Button Text="ApriAlert" Command="{Binding AlertCommand}"/>-->
+  </StackLayout>
+</ContentPage>

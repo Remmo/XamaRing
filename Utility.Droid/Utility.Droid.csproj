@@ -117,12 +117,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BarCodeScanner.cs" />
+    <Compile Include="BarCodeScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="CallUtils.cs" />
     <Compile Include="ContactUtils.cs" />
-    <Compile Include="CustomRenderer\EntryRenderer.cs" />
-    <Compile Include="CustomRenderer\TabRenderer.cs" />
-    <Compile Include="CustomRenderer\TimePickerRenderer.cs" />
     <Compile Include="ImageResizer.cs" />
     <Compile Include="MailUtils.cs" />
     <Compile Include="MainBaseDroid.cs" />
@@ -138,22 +137,10 @@
     <AndroidResource Include="Resources\Drawable\effe.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controls\Controls.csproj">
-      <Project>{9919756d-8cf1-4f7b-ba96-bdb435ab03d3}</Project>
-      <Name>Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DependencyServices\DependencyServices.csproj">
-      <Project>{75d20ddf-6734-4f3f-ac4c-78657cc47b4c}</Project>
-      <Name>DependencyServices</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DependencyServices\DependencyServices.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
-      <Name>DependencyServices</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Bootstrap\" />
   </ItemGroup>
+  <Import Project="..\XamaRing\XamaRing\XamaRing.projitems" Label="Shared" Condition="Exists('..\XamaRing\XamaRing\XamaRing.projitems')" />
+  <Import Project="..\XamaRing\XamaRing\XamaRing.projitems" Label="Shared" Condition="Exists('..\XamaRing\XamaRing\XamaRing.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

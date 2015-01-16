@@ -1,4 +1,5 @@
-﻿using Acr.XamForms.Mobile.Media;
+﻿using Acr.XamForms.BarCodeScanner;
+using Acr.XamForms.Mobile.Media;
 using Acr.XamForms.Mobile.Net;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,8 @@ namespace XamaRing
         }
         public static IMediaPicker MediaSvc;
         public static INetworkService NetworkSvc;
-
-        private static IBarCodeScanner barcodeScanner;
+        private static IBarCodeService barcodeScanner;
+        //private static IBarCodeScanner barcodeScanner;
         private static IMailSender mailSender;
         private static IAddContact addContact;
         private static ICallNumber callNumber;
@@ -91,11 +92,9 @@ namespace XamaRing
         {
             if (barcodeScanner == null)
             {
-                barcodeScanner = DependencyService.Get<IBarCodeScanner>();
+                barcodeScanner = DependencyService.Get<IBarCodeService>();
             }
-            barcodeScanner.Configuration.AutoRotate = true;
-            barcodeScanner.Configuration.BottomText = "Inquadrare un codice a barre";
-            var p = await barcodeScanner.ReadAsync();
+            var p = await barcodeScanner.Read();
             if (p.Success)
             {
                 return p.Code;

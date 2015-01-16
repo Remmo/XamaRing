@@ -11,6 +11,7 @@ using Acr.XamForms.UserDialogs.WindowsPhone;
 using Acr.XamForms.Mobile.WindowsPhone;
 using XamaRing.DS;
 using XamaRing.Utility.WinPhone;
+using Acr.XamForms.BarCodeScanner;
 
 namespace Samples.WinPhone
 {
@@ -31,6 +32,7 @@ namespace Samples.WinPhone
             new UserDialogService();
             new DeviceInfo();
             new ThemeUtils();
+            new BarCodeService();
             // Global handler for uncaught exceptions.
             UnhandledException += Application_UnhandledException;
 

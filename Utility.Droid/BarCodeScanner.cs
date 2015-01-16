@@ -85,4 +85,5 @@ namespace XamaRing.Utility.Droid
             return opts;
         }
     }
+
 }

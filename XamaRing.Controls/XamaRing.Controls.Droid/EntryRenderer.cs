@@ -12,12 +12,12 @@ using Android.Widget;
 using Xamarin.Forms.Platform.Android;
 
 using Xamarin.Forms;
-using XamaRing.Utility.Droid.CustomRenderer;
+
 using XamaRing.Controls;
 
 
-[assembly: ExportRenderer(typeof(CustomEntry), typeof(LoginEntryRenderer))]
-namespace XamaRing.Utility.Droid.CustomRenderer
+[assembly: ExportRenderer(typeof(CustomEntry), typeof(XamaRing.Controls.Droid.CustomRenderer.LoginEntryRenderer))]
+namespace XamaRing.Controls.Droid.CustomRenderer
 {
     public class LoginEntryRenderer : EntryRenderer
     {

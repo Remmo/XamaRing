@@ -11,8 +11,8 @@ using Android.Views;
 using Android.Widget;
 using Xamarin.Forms;
 
-[assembly: ExportRenderer(typeof(XamaRing.Controls.XTimePicker), typeof(XamaRing.Utility.Droid.CustomRenderer.XTimePickerRenderer))]
-namespace XamaRing.Utility.Droid.CustomRenderer
+[assembly: ExportRenderer(typeof(XamaRing.Controls.XTimePicker), typeof(XamaRing.Controls.Droid.CustomRenderer.XTimePickerRenderer))]
+namespace XamaRing.Controls.Droid.CustomRenderer
 {
     public class XTimePickerRenderer : XamaRing.Controls.XTimePicker
     {

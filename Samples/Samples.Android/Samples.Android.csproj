@@ -172,10 +172,6 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Controls\Controls.csproj">
-      <Project>{9919756d-8cf1-4f7b-ba96-bdb435ab03d3}</Project>
-      <Name>Controls</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Utility.Droid\Utility.Droid.csproj">
       <Project>{1d610eb8-8ce9-419a-9bbe-1c4d10e3de8a}</Project>
       <Name>Utility.Droid</Name>
