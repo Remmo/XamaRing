@@ -46,6 +46,9 @@
     <Compile Include="Views\SecondView.xaml.cs">
       <DependentUpon>SecondView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\XControlExamples.xaml.cs">
+      <DependentUpon>XControlExamples.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Core.csproj">
@@ -93,6 +96,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Views\SecondView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\XControlExamples.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

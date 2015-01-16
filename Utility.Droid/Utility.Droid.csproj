@@ -122,6 +122,7 @@
     <Compile Include="ContactUtils.cs" />
     <Compile Include="CustomRenderer\EntryRenderer.cs" />
     <Compile Include="CustomRenderer\TabRenderer.cs" />
+    <Compile Include="CustomRenderer\TimePickerRenderer.cs" />
     <Compile Include="ImageResizer.cs" />
     <Compile Include="MailUtils.cs" />
     <Compile Include="MainBaseDroid.cs" />

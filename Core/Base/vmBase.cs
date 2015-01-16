@@ -20,17 +20,26 @@ namespace XamaRing.Core.Base
 
         private IUserDialogService dialogService;
 
-        public vmBase()
+        public IUserDialogService DialogService
         {
-            //this.dialogService = AppBase.Resolve<IUserDialogService>();
+            get
+            {
+                if (dialogService == null)
+                    dialogService = AppBase.Resolve<IUserDialogService>();
+                return dialogService;
+            }
+            set { dialogService = value; }
         }
+
 
         private INavigation _navigation;
         public INavigation Navigation
         {
             get
             {
-                return _navigation ?? AppBase.AppNavigator.Navigation;
+                if (_navigation == null)
+                  _navigation= AppBase.AppNavigator.Navigation;
+                return _navigation; 
             }
             set { _navigation = value; }
         }
@@ -40,25 +49,11 @@ namespace XamaRing.Core.Base
         {
             get
             {
-                if(_cacheService==null)
-                    this._cacheService = Resolver.Resolve<ISimpleCache>();
+                if (_cacheService == null)
+                    this._cacheService = AppBase.Resolve<ISimpleCache>();
                 return _cacheService;
             }
             set { _cacheService = value; }
-        }
-        public async Task ShowAlert(String message, String title = null, String okText = "OK")
-        {
-            //await AppBase.AppNavigator.DisplayAlert(title,message,okText);
-            await this.dialogService.AlertAsync(message, title, okText);
-        }
-        public void ShowLoading(String title = "Caricamento")
-        {
-            this.dialogService.ShowLoading(title);
-        }
-
-        public void HideLoading()
-        {
-            this.dialogService.HideLoading();
         }
     }
     public abstract class ObservableObject : INotifyPropertyChanged

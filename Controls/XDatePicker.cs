@@ -19,6 +19,7 @@ namespace XamaRing.Controls
             set { SetValue(NullableDateProperty, value); UpdateDate(); }
         }
 
+     
         private void UpdateDate()
         {
             if (NullableDate.HasValue) { if (null != _format) Format = _format; Date = NullableDate.Value; }

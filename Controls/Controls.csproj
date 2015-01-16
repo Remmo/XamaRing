@@ -39,6 +39,7 @@
     <Compile Include="LoginEntry.cs" />
     <Compile Include="XDatePicker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XTimePicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
