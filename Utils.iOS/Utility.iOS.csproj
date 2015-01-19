@@ -90,6 +90,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="AppDelegateBaseIOS.cs" />
     <Compile Include="BarCodeScanner.cs" />
     <Compile Include="Bootstrap\EIDOSBootstrap.cs" />

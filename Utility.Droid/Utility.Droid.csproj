@@ -117,8 +117,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BarCodeScanner.cs">
-      <SubType>Code</SubType>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="CallUtils.cs" />
     <Compile Include="ContactUtils.cs" />

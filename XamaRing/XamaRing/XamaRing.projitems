@@ -11,7 +11,6 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)BarCodeScanner\BarCodeFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BarCodeScanner\BarCodeResult.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BarCodeScanner\BarCodeScannerConfiguration.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Droid.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)iOS.cs" />

@@ -31,13 +31,13 @@ namespace XamaRing.DS
         byte[] ResizeImageFromHeight(byte[] imageData, float height);
         byte[] ResizeImageFromWidth(byte[] imageData, float width);
     }
-    public interface IBarCodeScanner
-    {
-        BarCodeScannerConfiguration Configuration { get; }
+    //public interface IBarCodeScanner
+    //{
+    //    BarCodeScannerConfiguration Configuration { get; }
 
-        void Read(Action<BarCodeResult> onRead);
-        Task<BarCodeResult> ReadAsync();
-    }
+    //    void Read(Action<BarCodeResult> onRead);
+    //    Task<BarCodeResult> ReadAsync();
+    //}
 
     public interface IApplyTheme
     {
