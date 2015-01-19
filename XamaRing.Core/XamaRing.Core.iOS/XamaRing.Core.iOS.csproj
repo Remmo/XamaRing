@@ -108,6 +108,7 @@
     <Compile Include="Utility\iOSHelpers.cs" />
     <Compile Include="Utility\MailUtils.cs" />
     <Compile Include="Utility\ThemeUtils.cs" />
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

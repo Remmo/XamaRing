@@ -172,11 +172,12 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Utility.Droid\Utility.Droid.csproj">
-      <Project>{1d610eb8-8ce9-419a-9bbe-1c4d10e3de8a}</Project>
-      <Name>Utility.Droid</Name>
+    <ProjectReference Include="..\..\XamaRing.Core\XamaRing.Core.Droid\XamaRing.Core.Droid.csproj">
+      <Project>{47112c38-7e03-485f-8f73-12b41ddb69b1}</Project>
+      <Name>XamaRing.Core.Droid</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samples\Samples.csproj">
+      <Project>{82f1f843-1424-4152-bf8f-59596dbb022f}</Project>
       <Name>Samples</Name>
     </ProjectReference>
   </ItemGroup>

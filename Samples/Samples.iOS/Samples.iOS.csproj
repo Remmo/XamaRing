@@ -84,6 +84,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\XamaRing.Core\XamaRing.Core.iOS\XamaRing.Core.iOS.csproj">
+      <Project>{02bc147c-3123-47fa-9c0f-b8e8e714e850}</Project>
+      <Name>XamaRing.Core.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+    </ProjectReference>
     <ProjectReference Include="..\Samples\Samples.csproj">
       <Name>Samples</Name>
     </ProjectReference>

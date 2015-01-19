@@ -55,16 +55,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Core.csproj">
-      <Project>{83e52e84-6489-41e5-bfe4-2c762d50739e}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Utility\Utility.csproj">
-      <Project>{ccbe35c8-81c9-4728-8c2d-f2762babf236}</Project>
-      <Name>Utility</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="Acr.XamForms.Mobile">
       <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.0\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.Mobile.dll</HintPath>
     </Reference>
@@ -107,6 +97,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\XamaRing.Core\XamaRing.Core\XamaRing.Core.csproj">
+      <Project>{16666720-6026-4fb1-962e-0ec0f370abbe}</Project>
+      <Name>XamaRing.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
