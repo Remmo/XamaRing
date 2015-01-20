@@ -35,7 +35,7 @@ namespace Samples
             //{
             //    cfg.BgColor = Color.White;
             //}
-            //AppBase.SetCrossStyle(cfg);
+            AppBase.SetCrossStyle(cfg);
         }
     }
 }

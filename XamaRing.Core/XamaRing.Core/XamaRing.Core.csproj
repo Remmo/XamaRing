@@ -58,6 +58,7 @@
     <Compile Include="Controls\XTimePicker.cs" />
     <Compile Include="Utility\Extensions.cs" />
     <Compile Include="Utility\Interfaces.cs" />
+    <Compile Include="Utility\StyleConfig.cs" />
     <Compile Include="Utility\Utility.cs" />
   </ItemGroup>
   <ItemGroup>

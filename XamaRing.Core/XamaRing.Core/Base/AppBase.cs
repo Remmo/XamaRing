@@ -73,6 +73,7 @@ namespace XamaRing.Core.Base
                 .RegisterXamDependency<IMailSender>()
                 .RegisterXamDependency<IAddContact>()
                 .RegisterXamDependency<ICallNumber>()
+                .RegisterXamDependency<IApplyTheme>()                
                 .RegisterXamDependency<Acr.XamForms.Mobile.Media.IMediaPicker>()
                 //.RegisterXamDependency<Xamarin.Forms.Labs.Services.ISimpleCache>()
                 .Build();

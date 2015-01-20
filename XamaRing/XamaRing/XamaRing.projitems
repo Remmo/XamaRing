@@ -12,9 +12,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)BarCodeScanner\BarCodeFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BarCodeScanner\BarCodeResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Droid.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Interfaces.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)iOS.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)StyleConf\StyleConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WP.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)StyleConf\" />
   </ItemGroup>
 </Project>

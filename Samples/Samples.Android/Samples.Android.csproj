@@ -176,6 +176,10 @@
       <Project>{47112c38-7e03-485f-8f73-12b41ddb69b1}</Project>
       <Name>XamaRing.Core.Droid</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\XamaRing.Core\XamaRing.Core\XamaRing.Core.csproj">
+      <Project>{16666720-6026-4fb1-962e-0ec0f370abbe}</Project>
+      <Name>XamaRing.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Samples\Samples.csproj">
       <Project>{82f1f843-1424-4152-bf8f-59596dbb022f}</Project>
       <Name>Samples</Name>
