@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
+using XamaRing;
 using XamaRing.Core.Base;
 using XamaRing.DS.Configs;
 
@@ -17,6 +18,10 @@ namespace Samples
             manageTheme();
             AppBase.AppNavigator = new NavigationPage(new MainView());
             MainPage = AppBase.AppNavigator;
+            if (CrossTools.NetworkSvc.IsConnected)
+            {
+                MainPage = AppBase.AppNavigator;
+            }
         }
         
         private static void manageTheme()
