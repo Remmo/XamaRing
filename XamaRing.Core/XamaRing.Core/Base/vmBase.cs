@@ -55,7 +55,29 @@ namespace XamaRing.Core.Base
             }
             set { _cacheService = value; }
         }
+
+
+
+        public async Task<Boolean> ManageWsError( System.ComponentModel.AsyncCompletedEventArgs eventArgs)
+        {
+            if (eventArgs.Cancelled == true)
+            {
+                await this.DialogService.AlertAsync("La chiamata è stata abortita", "Errore durante la chiamata al servizio");
+                return false;
+            }
+            else if (eventArgs.Error != null && eventArgs.Error.Message != null)
+            {
+                await this.DialogService.AlertAsync(eventArgs.Error.Message, "Errore durante la chiamata al servizio");
+                return false;
+            }
+            return true;
+        }
     }
+
+    
+
+
+
     public abstract class ObservableObject : INotifyPropertyChanged
     {
         /// <summary>

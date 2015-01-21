@@ -18,5 +18,7 @@ namespace XamaRing.Core.Helpers
             }
             return col;
         }
+
+      
     }
 }
