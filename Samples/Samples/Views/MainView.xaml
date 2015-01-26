@@ -7,5 +7,6 @@
     <Button Text="ApriPagina" Command="{Binding PaginaCommand}"/>
     <Button Text="ApriAlert" Command="{Binding AlertCommand}"/>
     <Button Text="Open Services" Command="{Binding OnOpenServices}"/>
+    <Button Text="Controls" Command="{Binding OnOpenControls}"/>
   </StackLayout>
 </ContentPage>

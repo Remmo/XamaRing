@@ -18,7 +18,8 @@ namespace XamaRing.Controls.Droid.CustomRenderer
     {
         public XTimePickerRenderer()
         {
-           
+          
+
         }
        
     }
