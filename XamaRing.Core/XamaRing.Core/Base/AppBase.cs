@@ -23,6 +23,8 @@ namespace XamaRing.Core.Base
 
     public static class AppBase
     {
+        public static Boolean IsLoginRemoved = false;
+
         public static Boolean IsThemeChanged = false;
         public static bool IsLoggedIn = false;
         public static bool IsInitialized = false;
