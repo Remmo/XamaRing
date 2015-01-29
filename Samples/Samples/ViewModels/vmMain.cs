@@ -24,6 +24,7 @@ namespace Samples.ViewModels
         }
 
 
+        public ICommand OnOpenControls { get; private set; }
         public ICommand OnOpenServices { get; private set; }
         public ICommand PopupCommand { get; private set; }
         public ICommand PaginaCommand { get; private set; }
@@ -34,6 +35,10 @@ namespace Samples.ViewModels
         public vmMain()
         {
 
+            this.OnOpenControls = new Command(async () =>
+            {
+                await base.Navigation.PushAsync(new Samples.Views.XControlExamples());
+            });
             this.OnOpenServices = new Command(async () =>
             {
                 await base.Navigation.PushAsync(new Samples.Views.ServicesView());

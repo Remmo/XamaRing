@@ -4,6 +4,8 @@
       
              xmlns:XControls="clr-namespace:XamaRing.Controls;assembly=XamaRing.Core"
              x:Class="Samples.Views.XControlExamples">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
-  <XControls:XTimePicker TimeFormat="H24"></XControls:XTimePicker>
+  <StackLayout>
+    <XControls:XDatePicker  ></XControls:XDatePicker>   
+
+  </StackLayout>
 </ContentPage>
