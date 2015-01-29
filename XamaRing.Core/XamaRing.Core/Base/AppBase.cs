@@ -66,19 +66,94 @@ namespace XamaRing.Core.Base
             //Resolver.SetResolver(ResContainer.GetResolver());
             //if (InterfacesToRegister == null)
             //{
-            AppContainer = new ContainerBuilder()
+            ContainerBuilder cont = new ContainerBuilder();
+            try
+            {
+                cont.RegisterXamDependency<INetworkService>();
+            }
+            catch { }
+            try
+            {
+                cont.RegisterXamDependency<IDeviceInfo>();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            try
+            {
+                cont.RegisterXamDependency<IUserDialogService>();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            try
+            {
+                cont.RegisterXamDependency<IMailSender>();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            try
+            {
+                cont.RegisterXamDependency<IAddContact>();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            try
+            {
+                cont.RegisterXamDependency<ICallNumber>();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            try
+            {
+                cont.RegisterXamDependency<IApplyTheme>();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            try
+            {
+                cont.RegisterXamDependency<Acr.XamForms.Mobile.Media.IMediaPicker>();
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+
+
+            AppContainer = cont
                 //.RegisterViewModels()
                 //.RegisterXamDependency<IBarCodeScanner>()                
-                .RegisterXamDependency<INetworkService>()
-                .RegisterXamDependency<IDeviceInfo>()
-                .RegisterXamDependency<IUserDialogService>()
-                .RegisterXamDependency<IMailSender>()
-                .RegisterXamDependency<IAddContact>()
-                .RegisterXamDependency<ICallNumber>()
-                .RegisterXamDependency<IApplyTheme>()                
-                .RegisterXamDependency<Acr.XamForms.Mobile.Media.IMediaPicker>()
+                
+                
+                
+                
+                
+                
+                
                 //.RegisterXamDependency<Xamarin.Forms.Labs.Services.ISimpleCache>()
                 .Build();
+
+
+
+
             //}
             //else
             //{
