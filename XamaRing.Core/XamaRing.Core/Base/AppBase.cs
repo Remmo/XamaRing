@@ -23,6 +23,9 @@ namespace XamaRing.Core.Base
 
     public static class AppBase
     {
+
+
+
         public static Boolean IsLoginRemoved = false;
 
         public static Boolean IsThemeChanged = false;
@@ -141,13 +144,13 @@ namespace XamaRing.Core.Base
             AppContainer = cont
                 //.RegisterViewModels()
                 //.RegisterXamDependency<IBarCodeScanner>()                
-                
-                
-                
-                
-                
-                
-                
+
+
+
+
+
+
+
                 //.RegisterXamDependency<Xamarin.Forms.Labs.Services.ISimpleCache>()
                 .Build();
 
@@ -187,5 +190,8 @@ namespace XamaRing.Core.Base
         }
 
 
+        #region Navigation
+        public static List<Page> PagesToDeleteFromNavigation = new List<Page>();
+        #endregion
     }
 }

@@ -14,7 +14,6 @@ using XamaRing.Core.Helpers;
 
 namespace XamaRing.Core.Base
 {
-
     public partial class vmBase : ObservableObject
     {
 
@@ -38,8 +37,8 @@ namespace XamaRing.Core.Base
             get
             {
                 if (_navigation == null)
-                  _navigation= AppBase.AppNavigator.Navigation;
-                return _navigation; 
+                    _navigation = AppBase.AppNavigator.Navigation;
+                return _navigation;
             }
             set { _navigation = value; }
         }
@@ -58,7 +57,7 @@ namespace XamaRing.Core.Base
 
 
 
-        public async Task<Boolean> ManageWsError( System.ComponentModel.AsyncCompletedEventArgs eventArgs)
+        public async Task<Boolean> ManageWsError(System.ComponentModel.AsyncCompletedEventArgs eventArgs)
         {
             if (eventArgs.Cancelled == true)
             {
@@ -71,10 +70,41 @@ namespace XamaRing.Core.Base
                 return false;
             }
             return true;
+
         }
+
+        public void AddPageToRemoveFromStack(Page pg)
+        {
+            AppBase.PagesToDeleteFromNavigation.Add(pg);
+        }
+        public void RemovePageFromStack(Type pageTypeToRemove)
+        {
+            this.Navigation.RemovePage(this.Navigation.NavigationStack.First(q => q.GetType() == pageTypeToRemove));
+        }
+        public void RemovePagesToDeleteFromNavigation()
+        {
+            foreach (var p in AppBase.PagesToDeleteFromNavigation)
+            {
+                if (AppBase.AppNavigator.Navigation.NavigationStack.Contains(p))
+                    AppBase.AppNavigator.Navigation.RemovePage(p);
+            }
+            AppBase.PagesToDeleteFromNavigation.Clear();
+        }
+
+        public void ClearPagesToDeleteFromNavigation()
+        {
+            AppBase.PagesToDeleteFromNavigation.Clear();
+        }
+        public void AddPageAndRemoveFromNavigation(Page p)
+        {
+            AppBase.PagesToDeleteFromNavigation.Add(p);
+            RemovePagesToDeleteFromNavigation();
+        }
+        //public static int WordCount(this String str)
+
     }
 
-    
+
 
 
 
