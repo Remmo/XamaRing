@@ -110,7 +110,7 @@ namespace Samples
         }
         private LoginItalferr creaPaginaLogin()
         {
-            LoginItalferr login = new LoginItalferr(ct, 3) { IsLandscape = true, BackgroundColor = Color.FromHex("#a1b400"), TitoloApp = "ROI Giustificativi" };
+            LoginItalferr login = new LoginItalferr(ct, 3) { IsLandscape = false, BackgroundColor = Color.FromHex("#a1b400"), TitoloApp = "ROI Giustificativi" };
             login.CustomPageStyle.BgColor = Color.FromHex("#a1b400");
             login.CustomPageStyle.EntryBackgroundColor = Color.White;
             login.CustomPageStyle.WPPhoneChromeColor = Color.FromHex("#a1b400");
