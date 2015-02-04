@@ -43,6 +43,7 @@
     <Compile Include="Base\ContentPageBase.cs" />
     <Compile Include="Base\ViewBase.cs" />
     <Compile Include="Base\vmBase.cs" />
+    <Compile Include="Controls\DatePickerButton.cs" />
     <Compile Include="Controls\LoginEntry.cs" />
     <Compile Include="Converters\ByteArrayToImageSourceConverter.cs" />
     <Compile Include="Converters\NullToVisibleConverter.cs" />

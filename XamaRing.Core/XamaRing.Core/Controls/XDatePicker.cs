@@ -19,11 +19,11 @@ namespace XamaRing.Controls
             set { SetValue(NullableDateProperty, value); UpdateDate(); }
         }
 
-     
+
         private void UpdateDate()
         {
             if (NullableDate.HasValue) { if (null != _format) Format = _format; Date = NullableDate.Value; }
-            else { _format = Format; Format = "data"; }
+            else { _format = Format; Format = "..."; }
         }
         protected override void OnBindingContextChanged()
         {
