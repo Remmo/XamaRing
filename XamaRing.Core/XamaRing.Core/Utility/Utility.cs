@@ -15,6 +15,7 @@ namespace XamaRing
 {
     public static class CrossTools
     {
+      
         public static void InitializeUtility(INetworkService net, IMediaPicker pick)
         {
             MediaSvc = pick;

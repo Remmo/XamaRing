@@ -45,6 +45,7 @@
     <Compile Include="Base\vmBase.cs" />
     <Compile Include="Controls\DatePickerButton.cs" />
     <Compile Include="Controls\LoginEntry.cs" />
+    <Compile Include="Controls\XSwitch.cs" />
     <Compile Include="Converters\ByteArrayToImageSourceConverter.cs" />
     <Compile Include="Converters\NullToVisibleConverter.cs" />
     <Compile Include="Converters\StringToEnumConverter.cs" />
