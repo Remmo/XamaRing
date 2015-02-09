@@ -9,8 +9,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.Labs.Services;
 using XamaRing.Core.Helpers;
+using XLabs.Caching;
+using XLabs.Ioc;
 
 namespace XamaRing.Core.Base
 {

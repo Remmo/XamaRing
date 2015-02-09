@@ -53,7 +53,17 @@ namespace XamaRing.Core.Base
         }
         public static void InitHelpers()
         {
-            CrossTools.InitializeUtility(Resolve<INetworkService>(), Resolve<Acr.XamForms.Mobile.Media.IMediaPicker>());
+            Acr.XamForms.Mobile.Media.IMediaPicker picker = null;
+            try
+            {
+                picker = Resolve<Acr.XamForms.Mobile.Media.IMediaPicker>();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            CrossTools.InitializeUtility(Resolve<INetworkService>(), picker);
             XamaRing.Core.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
         }
 
