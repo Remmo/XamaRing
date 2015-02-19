@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using XamaRing.Core.Base;
 using System.Windows.Input;
 using Xamarin.Forms;
-using Acr.XamForms.UserDialogs;
+using Acr.UserDialogs;
 
 namespace Samples.ViewModels
 {
@@ -30,7 +30,7 @@ namespace Samples.ViewModels
         public ICommand PaginaCommand { get; private set; }
         public ICommand AlertCommand { get; private set; }
 
-        private IUserDialogService dialogService = AppBase.Resolve<IUserDialogService>();
+        private IUserDialogs dialogService = AppBase.Resolve<IUserDialogs>();
 
         public vmMain()
         {

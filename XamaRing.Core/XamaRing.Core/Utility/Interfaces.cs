@@ -8,6 +8,10 @@ using XamaRing.DS.Configs;
 
 namespace XamaRing.DS
 {
+    public interface ICloseApp
+    {
+        void CloseApp();
+    }
     public interface IMailSender
     {
         void SendMail(List<String> recipients, List<String> recipientsCC, String subject, String body);

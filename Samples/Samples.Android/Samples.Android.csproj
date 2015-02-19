@@ -60,13 +60,11 @@
     <MonoDroidExtraArgs />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Acr.XamForms.BarCodeScanner">
-      <HintPath>..\..\packages\Acr.XamForms.BarCodeScanner.2.0.2\lib\MonoAndroid10\Acr.XamForms.BarCodeScanner.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Acr.BarCodes">
+      <HintPath>..\..\packages\Acr.BarCodes.3.0.0\lib\MonoAndroid10\Acr.BarCodes.dll</HintPath>
     </Reference>
-    <Reference Include="Acr.XamForms.BarCodeScanner.Droid">
-      <HintPath>..\..\packages\Acr.XamForms.BarCodeScanner.2.0.2\lib\MonoAndroid10\Acr.XamForms.BarCodeScanner.Droid.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.3.0.3\lib\MonoAndroid10\Acr.UserDialogs.dll</HintPath>
     </Reference>
     <Reference Include="Acr.XamForms.Mobile">
       <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.2\lib\MonoAndroid10\Acr.XamForms.Mobile.dll</HintPath>
@@ -76,17 +74,8 @@
       <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.2\lib\MonoAndroid10\Acr.XamForms.Mobile.Droid.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Acr.XamForms.UserDialogs">
-      <HintPath>..\..\packages\Acr.XamForms.UserDialogs.3.0.2\lib\MonoAndroid10\Acr.XamForms.UserDialogs.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Acr.XamForms.UserDialogs.Droid">
-      <HintPath>..\..\packages\Acr.XamForms.UserDialogs.3.0.2\lib\MonoAndroid10\Acr.XamForms.UserDialogs.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="AndHUD">
-      <HintPath>..\..\packages\Acr.XamForms.UserDialogs.3.0.2\lib\MonoAndroid10\AndHUD.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\packages\Acr.UserDialogs.3.0.3\lib\MonoAndroid10\AndHUD.dll</HintPath>
     </Reference>
     <Reference Include="ExifLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -164,20 +153,16 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="XLabs.Serialization">
-      <HintPath>..\..\packages\XLabs.Serialization.2.0.5520\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\packages\XLabs.Serialization.2.0.5522\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="zxing.monoandroid, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="zxing.monoandroid">
       <HintPath>..\..\packages\ZXing.Net.Mobile.1.4.7.1\lib\MonoAndroid\zxing.monoandroid.dll</HintPath>
     </Reference>
-    <Reference Include="ZXing.Net.Mobile, Version=1.4.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="ZXing.Net.Mobile">
       <HintPath>..\..\packages\ZXing.Net.Mobile.1.4.7.1\lib\MonoAndroid\ZXing.Net.Mobile.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bootstrap\BarCodeServiceBootstrap.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -55,12 +55,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.3.0.3\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
+    </Reference>
     <Reference Include="Acr.XamForms.Mobile">
       <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.2\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.Mobile.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Acr.XamForms.UserDialogs">
-      <HintPath>..\..\packages\Acr.XamForms.UserDialogs.3.0.2\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.UserDialogs.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ExifLib">
@@ -98,8 +97,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="XLabs.Serialization">
-      <HintPath>..\..\packages\XLabs.Serialization.2.0.5520\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\packages\XLabs.Serialization.2.0.5522\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -130,9 +128,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\XamaRing.Cache\XamaRing.Cache.csproj">
+      <Project>{04e5e9fd-097e-4e4b-b047-666e5a6ffbaa}</Project>
+      <Name>XamaRing.Cache</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\XamaRing.Core\XamaRing.Core\XamaRing.Core.csproj">
       <Project>{16666720-6026-4fb1-962e-0ec0f370abbe}</Project>
       <Name>XamaRing.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XamaRing.Media\XamaRing.Media.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>XamaRing.Media</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

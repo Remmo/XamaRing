@@ -1,5 +1,4 @@
 ﻿using Acr.XamForms.Mobile.Net;
-using Acr.XamForms.UserDialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamaRing.Core.Helpers;
-using XLabs.Caching;
+
 using XLabs.Ioc;
 
 namespace XamaRing.Core.Base
@@ -18,14 +17,14 @@ namespace XamaRing.Core.Base
     public partial class vmBase : ObservableObject
     {
 
-        private IUserDialogService dialogService;
+        private Acr.UserDialogs.IUserDialogs dialogService;
 
-        public IUserDialogService DialogService
+        public Acr.UserDialogs.IUserDialogs DialogService
         {
             get
             {
                 if (dialogService == null)
-                    dialogService = AppBase.Resolve<IUserDialogService>();
+                    dialogService = Acr.UserDialogs.UserDialogs.Instance;// AppBase.Resolve<Acr.UserDialogs.IUserDialogs>();
                 return dialogService;
             }
             set { dialogService = value; }
@@ -37,24 +36,14 @@ namespace XamaRing.Core.Base
         {
             get
             {
+
                 if (_navigation == null)
                     _navigation = AppBase.AppNavigator.Navigation;
                 return _navigation;
             }
             set { _navigation = value; }
         }
-        private ISimpleCache _cacheService;
 
-        public ISimpleCache CacheService
-        {
-            get
-            {
-                if (_cacheService == null)
-                    this._cacheService = Resolver.Resolve<ISimpleCache>();
-                return _cacheService;
-            }
-            set { _cacheService = value; }
-        }
 
 
 

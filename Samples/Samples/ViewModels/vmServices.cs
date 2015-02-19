@@ -19,7 +19,7 @@ namespace Samples.ViewModels
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    var dt = await CrossTools.ReadBarcode();
+                    var dt = await XamaRing.CrossToolsMedia.ReadBarcode();
                     if (!String.IsNullOrWhiteSpace(dt))
                     {
                         await DialogService.AlertAsync(dt);

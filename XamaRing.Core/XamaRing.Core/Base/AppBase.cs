@@ -1,6 +1,5 @@
 ﻿using Acr.XamForms.Mobile;
 using Acr.XamForms.Mobile.Net;
-using Acr.XamForms.UserDialogs;
 using Autofac;
 using System;
 using System.Collections.Generic;
@@ -53,17 +52,17 @@ namespace XamaRing.Core.Base
         }
         public static void InitHelpers()
         {
-            Acr.XamForms.Mobile.Media.IMediaPicker picker = null;
-            try
-            {
-                picker = Resolve<Acr.XamForms.Mobile.Media.IMediaPicker>();
-            }
-            catch (Exception)
-            {
+            //Acr.XamForms.Mobile.Media.IMediaPicker picker = null;
+            //try
+            //{
+            //    picker = Resolve<Acr.XamForms.Mobile.Media.IMediaPicker>();
+            //}
+            //catch (Exception)
+            //{
 
 
-            }
-            CrossTools.InitializeUtility(Resolve<INetworkService>(), picker);
+            //}
+            CrossTools.InitializeUtility(Resolve<INetworkService>());
             XamaRing.Core.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
         }
 
@@ -94,15 +93,15 @@ namespace XamaRing.Core.Base
 
 
             }
-            try
-            {
-                cont.RegisterXamDependency<IUserDialogService>();
-            }
-            catch (Exception)
-            {
+            //try
+            //{
+            //    cont.RegisterXamDependency<Acr.UserDialogs.IUserDialogs>();
+            //}
+            //catch (Exception)
+            //{
 
 
-            }
+            //}
             try
             {
                 cont.RegisterXamDependency<IMailSender>();
@@ -139,15 +138,15 @@ namespace XamaRing.Core.Base
 
 
             }
-            try
-            {
-                cont.RegisterXamDependency<Acr.XamForms.Mobile.Media.IMediaPicker>();
-            }
-            catch (Exception)
-            {
+            //try
+            //{
+            //    cont.RegisterXamDependency<Acr.XamForms.Mobile.Media.IMediaPicker>();
+            //}
+            //catch (Exception)
+            //{
 
 
-            }
+            //}
 
 
 
@@ -200,7 +199,35 @@ namespace XamaRing.Core.Base
         }
 
 
+
+
+
         #region Navigation
+        public static void GestisciUscitaApp(bool uscire)
+        {
+            if (uscire && Device.OS == TargetPlatform.WinPhone)
+            {
+                DependencyService.Get<ICloseApp>().CloseApp();
+            }
+            else if (uscire && Device.OS == TargetPlatform.Android)
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await AppBase.AppNavigator.Navigation.PopAsync();
+                });
+            }
+            else if (uscire && Device.OS == TargetPlatform.iOS)
+            {
+                //Da testare su Ios!!
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await AppBase.AppNavigator.Navigation.PopAsync();
+                });
+            }
+
+        }
+
+
         public static List<Page> PagesToDeleteFromNavigation = new List<Page>();
         #endregion
     }

@@ -1,5 +1,4 @@
-﻿using Acr.XamForms.BarCodeScanner;
-using Acr.XamForms.Mobile.Media;
+﻿using Acr.XamForms.Mobile.Media;
 using Acr.XamForms.Mobile.Net;
 using System;
 using System.Collections.Generic;
@@ -16,14 +15,13 @@ namespace XamaRing
     public static class CrossTools
     {
       
-        public static void InitializeUtility(INetworkService net, IMediaPicker pick)
-        {
-            MediaSvc = pick;
+        public static void InitializeUtility(INetworkService net)
+        {         
             NetworkSvc = net;
         }
-        public static IMediaPicker MediaSvc;
+       
         public static INetworkService NetworkSvc;
-        private static IBarCodeService barcodeScanner;
+
         //private static IBarCodeScanner barcodeScanner;
         private static IMailSender mailSender;
         private static IAddContact addContact;
@@ -89,20 +87,7 @@ namespace XamaRing
             return imageResizer.ResizeImage(imageData, frazione);
         }
 
-        public static async Task<String> ReadBarcode()
-        {
-            if (barcodeScanner == null)
-            {
-                barcodeScanner = DependencyService.Get<IBarCodeService>();
-            }
-            var p = await barcodeScanner.Read();
-            if (p.Success)
-            {
-                return p.Code;
-            }
-            else
-                return String.Empty;
-        }
+      
 
 
 

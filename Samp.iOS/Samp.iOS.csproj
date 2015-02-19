@@ -89,7 +89,6 @@
   <ItemGroup>
     <Compile Include="Bootstrap\EIDOSBootstrap.cs" />
     <Compile Include="Bootstrap\MobileBootstrap.cs" />
-    <Compile Include="Bootstrap\UserDialogsBootstrap.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Info.plist" />
@@ -100,6 +99,12 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Acr.BarCodes">
+      <HintPath>..\packages\Acr.BarCodes.3.0.0\lib\Xamarin.iOS10\Acr.BarCodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\packages\Acr.UserDialogs.3.0.3\lib\Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
+    </Reference>
     <Reference Include="Acr.XamForms.Mobile">
       <HintPath>..\packages\Acr.XamForms.Mobile.2.0.2\lib\Xamarin.iOS10\Acr.XamForms.Mobile.dll</HintPath>
       <Private>True</Private>
@@ -108,17 +113,8 @@
       <HintPath>..\packages\Acr.XamForms.Mobile.2.0.2\lib\Xamarin.iOS10\Acr.XamForms.Mobile.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Acr.XamForms.UserDialogs">
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.3.0.2\lib\Xamarin.iOS10\Acr.XamForms.UserDialogs.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Acr.XamForms.UserDialogs.iOS">
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.3.0.2\lib\Xamarin.iOS10\Acr.XamForms.UserDialogs.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="BTProgressHUD">
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.3.0.2\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Acr.UserDialogs.3.0.3\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
     </Reference>
     <Reference Include="ExifLib">
       <HintPath>..\packages\ExifLib.PCL.1.0.0\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
@@ -184,8 +180,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="XLabs.Serialization">
-      <HintPath>..\packages\XLabs.Serialization.2.0.5520\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\XLabs.Serialization.2.0.5522\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.ios">
+      <HintPath>..\packages\ZXing.Net.Mobile.1.4.7.1\lib\Xamarin.iOS\zxing.ios.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile">
+      <HintPath>..\packages\ZXing.Net.Mobile.1.4.7.1\lib\Xamarin.iOS\ZXing.Net.Mobile.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
