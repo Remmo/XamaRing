@@ -22,10 +22,12 @@ namespace XamaRing
 
         public static async Task<String> ReadBarcode()
         {
+            //if (barcodeScanner == null)
+            //{
+            //    barcodeScanner = DependencyService.Get<Acr.BarCodes.IBarCodes>();
+            //}
             if (barcodeScanner == null)
-            {
-                barcodeScanner = DependencyService.Get<Acr.BarCodes.IBarCodes>();
-            }
+                barcodeScanner = Acr.BarCodes.BarCodes.Instance;
             var p = await barcodeScanner.Read();
             if (p.Success)
             {

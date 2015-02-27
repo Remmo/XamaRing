@@ -19,6 +19,7 @@ namespace XamaRing
             {
                 if (_cacheService == null)
                     _cacheService = Resolver.Resolve<ISimpleCache>();
+
                 return _cacheService;
             }
             set { _cacheService = value; }
