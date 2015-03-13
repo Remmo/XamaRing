@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using XamaRing.DS;
 using XamaRing.DS.Configs;
 using XLabs.Platform.Device;
+using XLabs.Platform.Services;
 
 
 namespace XamaRing
@@ -17,10 +18,16 @@ namespace XamaRing
 
         public static void InitializeUtility(IDevice net)
         {
-            NetworkSvc = net;
+            NetworkSvc = net.Network;
+
         }
 
-        public static IDevice NetworkSvc;
+        public static Boolean IsConnected()
+        {
+            return NetworkSvc.InternetConnectionStatus() != NetworkStatus.NotReachable;
+        }
+
+        public static INetwork NetworkSvc;
 
         //private static IBarCodeScanner barcodeScanner;
         private static IMailSender mailSender;

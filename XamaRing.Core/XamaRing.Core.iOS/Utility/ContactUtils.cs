@@ -16,11 +16,11 @@ using XamaRing.Utility.iOS;
 namespace XamaRing.Utility.iOS
 {
     [Preserve]
-    public  class ContactAdder : DS.IAddContact
+    public class ContactAdder : DS.IAddContact
     {
         ABNewPersonViewController _newPersonController;
         public ContactAdder()
-        { 
+        {
             _newPersonController = new ABNewPersonViewController();
         }
 
@@ -36,21 +36,27 @@ namespace XamaRing.Utility.iOS
             contact.SetPhones(cel);
             _newPersonController.DisplayedPerson = contact;
 
-            AppDelegateBaseIOS.FindNavigationController().PushViewController(_newPersonController, true);
-             
-       //    _newPersonController.NewPersonComplete += (object sender,
-       //       ABNewPersonCompleteEventArgs e) => {
+            //AppDelegateBaseIOS.FindNavigationController().PushViewController(_newPersonController, true);
 
-       //       if (e.Completed) {
-       //             
-       //       }  else {
-       //               
-       //       }       
-       //} ;
+            _newPersonController.ShowViewController(AppDelegateBaseIOS.FindNavigationController(), null);
+            _newPersonController.NewPersonComplete += (object sender,
+                 ABNewPersonCompleteEventArgs e) =>
+                 {
+
+                     if (e.Completed)
+                     {
+
+                     }
+                     else
+                     {
+
+                     }
+                 };
         }
 
         public void AddContact(string FirstName, string LastName, string MobilePhone, string WorkPhone, string HomePhone, string Fax, string Mail)
         {
+            _newPersonController = new ABNewPersonViewController();
             var contact = new ABPerson();
             contact.FirstName = FirstName;
             contact.LastName = LastName;
@@ -68,21 +74,41 @@ namespace XamaRing.Utility.iOS
                 cel.Add(new NSString(MobilePhone), new NSString("Mobile"));
 
             if (!string.IsNullOrEmpty(WorkPhone))
-            cel.Add(new NSString(WorkPhone), new NSString("Work"));
+                cel.Add(new NSString(WorkPhone), new NSString("Work"));
 
             if (!string.IsNullOrEmpty(HomePhone))
-            cel.Add(new NSString(HomePhone), new NSString("Home"));
+                cel.Add(new NSString(HomePhone), new NSString("Home"));
 
             if (!string.IsNullOrEmpty(Fax))
-            cel.Add(new NSString(Fax), new NSString("Fax"));
+                cel.Add(new NSString(Fax), new NSString("Fax"));
 
-            if(cel.Count>0)
+            if (cel.Count > 0)
                 contact.SetPhones(cel);
 
 
             _newPersonController.DisplayedPerson = contact;
 
-            AppDelegateBaseIOS.FindNavigationController().PushViewController(_newPersonController, true);
+            var main = AppDelegateBaseIOS.FindNavigationController();
+
+            main.PushViewController(_newPersonController, true);
+            _newPersonController.NewPersonComplete += (object sender,
+                 ABNewPersonCompleteEventArgs e) =>
+            {
+                main.PopViewController(true);
+                //_newPersonController.ShowViewController(AppDelegateBaseIOS.FindNavigationController(), null);
+                //if (e.Completed)
+                //{
+                //    _newPersonController.ShowViewController(AppDelegateBaseIOS.FindNavigationController(), null);
+                //}
+                //else
+                //{
+                //    return;
+                //}
+            };
+
+
+
+            //
         }
     }
 }

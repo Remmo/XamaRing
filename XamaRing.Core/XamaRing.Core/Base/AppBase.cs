@@ -12,6 +12,7 @@ using XamaRing;
 using XamaRing.DS.Configs;
 using XLabs.Ioc;
 using XLabs.Platform.Device;
+using XLabs.Platform.Mvvm;
 
 
 //using Acr.XamForms.Infrastructure;
@@ -62,7 +63,7 @@ namespace XamaRing.Core.Base
             //{
 
 
-            //}
+            //}         
             var dev = Resolver.Resolve<IDevice>();
             CrossTools.InitializeUtility(dev);
             XamaRing.Core.Helpers.DeviceInfos.Initialize(dev);
@@ -81,11 +82,11 @@ namespace XamaRing.Core.Base
             //if (InterfacesToRegister == null)
             //{
             ContainerBuilder cont = new ContainerBuilder();
-            //try
-            //{
-            //    cont.RegisterXamDependency<INetworkService>();
-            //}
-            //catch { }
+            try
+            {
+                cont.RegisterXamDependency<IDevice>();
+            }
+            catch { }
             //try
             //{
             //    cont.RegisterXamDependency<IDeviceInfo>();
