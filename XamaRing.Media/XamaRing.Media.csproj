@@ -43,9 +43,6 @@
     <Reference Include="Acr.BarCodes">
       <HintPath>..\packages\Acr.BarCodes.3.0.2\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\Acr.BarCodes.dll</HintPath>
     </Reference>
-    <Reference Include="Acr.XamForms.Mobile">
-      <HintPath>..\packages\Acr.XamForms.Mobile.2.0.3\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
     </Reference>

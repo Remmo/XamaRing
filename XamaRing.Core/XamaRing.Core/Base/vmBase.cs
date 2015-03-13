@@ -1,5 +1,4 @@
-﻿using Acr.XamForms.Mobile.Net;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;

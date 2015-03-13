@@ -99,7 +99,6 @@
     </Compile>
     <Compile Include="Bootstrap\EIDOSBootstrap.cs" />
     <Compile Include="Bootstrap\MediaBootstrap.cs" />
-    <Compile Include="Bootstrap\MobileBootstrap.cs" />
     <Compile Include="Controls\EntryRenderer.cs" />
     <Compile Include="Controls\TimePickerRender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,14 +126,6 @@
     <Reference Include="Acr.UserDialogs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Acr.UserDialogs.3.0.4\lib\Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.XamForms.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.3\lib\Xamarin.iOS10\Acr.XamForms.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.XamForms.Mobile.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.3\lib\Xamarin.iOS10\Acr.XamForms.Mobile.iOS.dll</HintPath>
     </Reference>
     <Reference Include="BTProgressHUD, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -164,10 +155,6 @@
       <HintPath>..\..\packages\Xamarin.Forms.1.3.5.6337\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Xamarin.Mobile, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.3\lib\Xamarin.iOS10\Xamarin.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="XLabs.Core, Version=2.0.5540.29610, Culture=neutral, PublicKeyToken=d65109b36e5040e4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\XLabs.Core.2.0.5540\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Core.dll</HintPath>

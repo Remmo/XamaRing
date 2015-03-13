@@ -70,9 +70,6 @@
     <Reference Include="Acr.UserDialogs">
       <HintPath>..\..\packages\Acr.UserDialogs.3.0.4\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
     </Reference>
-    <Reference Include="Acr.XamForms.Mobile">
-      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.3\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="Autofac">
       <HintPath>..\..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
     </Reference>

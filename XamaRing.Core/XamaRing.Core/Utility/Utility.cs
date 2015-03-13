@@ -1,5 +1,4 @@
-﻿using Acr.XamForms.Mobile.Media;
-using Acr.XamForms.Mobile.Net;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,19 +7,20 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamaRing.DS;
 using XamaRing.DS.Configs;
+using XLabs.Platform.Device;
 
 
 namespace XamaRing
 {
     public static class CrossTools
     {
-      
-        public static void InitializeUtility(INetworkService net)
-        {         
+
+        public static void InitializeUtility(IDevice net)
+        {
             NetworkSvc = net;
         }
-       
-        public static INetworkService NetworkSvc;
+
+        public static IDevice NetworkSvc;
 
         //private static IBarCodeScanner barcodeScanner;
         private static IMailSender mailSender;
@@ -87,7 +87,7 @@ namespace XamaRing
             return imageResizer.ResizeImage(imageData, frazione);
         }
 
-      
+
 
 
 
@@ -95,12 +95,12 @@ namespace XamaRing
         public static void ApplyCrossTheme(StyleConfig config)
         {
 
-                if (applyTheme == null)
-                {
-                    applyTheme = DependencyService.Get<IApplyTheme>();
-                }
-                applyTheme.ApplyTheme(config);
-            
+            if (applyTheme == null)
+            {
+                applyTheme = DependencyService.Get<IApplyTheme>();
+            }
+            applyTheme.ApplyTheme(config);
+
         }
         #endregion
 

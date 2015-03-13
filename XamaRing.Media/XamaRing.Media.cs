@@ -1,5 +1,4 @@
 ﻿
-using Acr.XamForms.Mobile.Media;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +11,13 @@ namespace XamaRing
     public static class CrossToolsMedia
     {
         private static Acr.BarCodes.IBarCodes barcodeScanner;
-        public static IMediaPicker MediaSvc;
+        //public static IMediaPicker MediaSvc;
 
-        public static void InitializeMedia(IMediaPicker pick)
-        {    
-            MediaSvc = pick;          
-        }
-       
+        //public static void InitializeMedia(IMediaPicker pick)
+        //{    
+        //    MediaSvc = pick;          
+        //}
+
 
         public static async Task<String> ReadBarcode()
         {

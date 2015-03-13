@@ -67,14 +67,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Acr.UserDialogs.3.0.4\lib\MonoAndroid10\Acr.UserDialogs.dll</HintPath>
     </Reference>
-    <Reference Include="Acr.XamForms.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.3\lib\MonoAndroid10\Acr.XamForms.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.XamForms.Mobile.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.3\lib\MonoAndroid10\Acr.XamForms.Mobile.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="AndHUD, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Acr.UserDialogs.3.0.4\lib\MonoAndroid10\AndHUD.dll</HintPath>

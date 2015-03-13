@@ -1,5 +1,4 @@
-﻿using Acr.XamForms.Mobile;
-using Acr.XamForms.Mobile.Net;
+﻿
 using Autofac;
 using System;
 using System.Collections.Generic;
@@ -11,6 +10,8 @@ using Xamarin.Forms;
 using XamaRing.DS;
 using XamaRing;
 using XamaRing.DS.Configs;
+using XLabs.Ioc;
+using XLabs.Platform.Device;
 
 
 //using Acr.XamForms.Infrastructure;
@@ -62,8 +63,9 @@ namespace XamaRing.Core.Base
 
 
             //}
-            CrossTools.InitializeUtility(Resolve<INetworkService>());
-            XamaRing.Core.Helpers.DeviceInfos.Initialize(Resolve<IDeviceInfo>());
+            var dev = Resolver.Resolve<IDevice>();
+            CrossTools.InitializeUtility(dev);
+            XamaRing.Core.Helpers.DeviceInfos.Initialize(dev);
         }
 
         //static SimpleContainer ResContainer;
@@ -79,20 +81,20 @@ namespace XamaRing.Core.Base
             //if (InterfacesToRegister == null)
             //{
             ContainerBuilder cont = new ContainerBuilder();
-            try
-            {
-                cont.RegisterXamDependency<INetworkService>();
-            }
-            catch { }
-            try
-            {
-                cont.RegisterXamDependency<IDeviceInfo>();
-            }
-            catch (Exception)
-            {
+            //try
+            //{
+            //    cont.RegisterXamDependency<INetworkService>();
+            //}
+            //catch { }
+            //try
+            //{
+            //    cont.RegisterXamDependency<IDeviceInfo>();
+            //}
+            //catch (Exception)
+            //{
 
 
-            }
+            //}
             //try
             //{
             //    cont.RegisterXamDependency<Acr.UserDialogs.IUserDialogs>();
