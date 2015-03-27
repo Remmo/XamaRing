@@ -30,11 +30,20 @@ namespace XamaRing
         public static INetwork NetworkSvc;
 
         //private static IBarCodeScanner barcodeScanner;
+        private static IOpenPdf openPdf;
         private static IMailSender mailSender;
         private static IAddContact addContact;
         private static ICallNumber callNumber;
         private static IImageResizer imageResizer;
         private static IApplyTheme applyTheme;
+        public static void OpenPDF(String filePath)
+        {
+            if (openPdf == null)
+            {
+                openPdf = DependencyService.Get<IOpenPdf>();
+            }
+            openPdf.OpenPdf(filePath);
+        }
         public static void SendMail(List<String> recipientsTO, List<String> recipientsCC, String subject, String body)
         {
             if (mailSender == null)

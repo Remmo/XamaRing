@@ -17,11 +17,16 @@ namespace XamaRing.DS
         void SendMail(List<String> recipients, List<String> recipientsCC, String subject, String body);
     }
 
+    public interface IOpenPdf
+    {
+        void OpenPdf(String filePath);
+    }
+
     public interface IAddContact
     {
-        void AddContact(string FirstName, string LastName, string MobilePhone);
+        void AddContact(String FirstName, string LastName, string MobilePhone);
 
-        void AddContact(string FirstName, string LastName, string MobilePhone, string WorkPhone, string HomePhone, string Fax, string Mail);
+        void AddContact(String FirstName, string LastName, string MobilePhone, string WorkPhone, string HomePhone, string Fax, string Mail);
     }
 
     public interface ICallNumber
