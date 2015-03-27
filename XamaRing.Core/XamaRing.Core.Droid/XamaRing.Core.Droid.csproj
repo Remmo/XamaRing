@@ -147,6 +147,7 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Base\MainActivityBase.cs" />
     <Compile Include="Controls\EntryRenderer.cs" />
     <Compile Include="Controls\TabRenderer.cs" />
     <Compile Include="Controls\TimePickerRenderer.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Utility\ImageResizer.cs" />
     <Compile Include="Utility\MailUtils.cs" />
     <Compile Include="Utility\MainBaseDroid.cs" />
+    <Compile Include="Utility\OpenPDFcs.cs" />
     <Compile Include="Utility\ThemeUtils.cs" />
   </ItemGroup>
   <ItemGroup>
