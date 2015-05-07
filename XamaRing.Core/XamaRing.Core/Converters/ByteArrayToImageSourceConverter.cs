@@ -14,19 +14,19 @@ namespace XamaRing.Base.Converters
         public ImageSource DefaultImageSource { get; set; }
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (value == null)
+            if (value == null || ((Byte[])value).Count() == 0)
             {
                 return DefaultImageSource;
             }
             var bArray = (byte[])value;
 
             var imgsrc = ImageSource.FromStream(() =>
-            {                
+            {
                 var ms = new MemoryStream(bArray);
                 ms.Position = 0;
                 return ms;
             });
-            
+
             return imgsrc;
         }
 
